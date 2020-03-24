@@ -114,46 +114,46 @@ class structtype(object):
     def __len__(self):
           return len(self._data)
 
-def M2M_URLs(mooring_name,node,instrument_class,method):
+def M2M_URLs(platform_name,node,instrument_class,method):
 	var_list = structtype()
 	#MOPAK
-	if mooring_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	if platform_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/SBD17/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/SBD11/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/SBD11/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/SBD17/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/SBD11/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/SBD11/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE09OSPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CE09OSPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSPM/SBS01/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
     #METBK
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/SBD11/06-METBKA000/telemetered/metbk_a_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sea_surface_temperature'
@@ -212,7 +212,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[16].units = 'm/s'
 	    var_list[17].units = 'm/s'
 	    var_list[18].units = 'g/kg'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/SBD11/06-METBKA000/telemetered/metbk_a_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sea_surface_temperature'
@@ -271,7 +271,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[16].units = 'm/s'
 	    var_list[17].units = 'm/s'
 	    var_list[18].units = 'g/kg'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/SBD11/06-METBKA000/telemetered/metbk_a_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sea_surface_temperature'
@@ -330,7 +330,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[16].units = 'm/s'
 	    var_list[17].units = 'm/s'
 	    var_list[18].units = 'g/kg'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/SBD11/06-METBKA000/telemetered/metbk_a_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sea_surface_temperature'
@@ -390,7 +390,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[17].units = 'm/s'
 	    var_list[18].units = 'g/kg'
     #FLORT
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/RID16/02-FLORTD000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -410,7 +410,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/SBD17/06-FLORTD000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -430,7 +430,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/RID16/02-FLORTD000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -450,7 +450,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/SBD17/06-FLORTD000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -470,7 +470,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/RID27/02-FLORTD000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -490,7 +490,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/RID27/02-FLORTD000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -510,7 +510,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/RID27/02-FLORTD000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -530,7 +530,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/RID27/02-FLORTD000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -550,7 +550,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSPM/WFP01/04-FLORTK000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -574,13 +574,13 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
     #FDCHP
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'FDCHP' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'FDCHP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/SBD12/08-FDCHPA000/telemetered/fdchp_a_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
     #DOSTA
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/RID16/03-DOSTAD000/telemetered/dosta_abcdjm_ctdbp_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -591,7 +591,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/RID27/04-DOSTAD000/telemetered/dosta_abcdjm_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -608,7 +608,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/RID27/04-DOSTAD000/telemetered/dosta_abcdjm_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -625,7 +625,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/RID16/03-DOSTAD000/telemetered/dosta_abcdjm_ctdbp_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -636,7 +636,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/RID27/04-DOSTAD000/telemetered/dosta_abcdjm_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -653,7 +653,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/RID27/04-DOSTAD000/telemetered/dosta_abcdjm_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -670,7 +670,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/MFD37/03-DOSTAD000/telemetered/dosta_abcdjm_ctdbp_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -681,7 +681,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/MFD37/03-DOSTAD000/telemetered/dosta_abcdjm_ctdbp_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -692,7 +692,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/MFD37/03-DOSTAD000/telemetered/dosta_abcdjm_ctdbp_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -703,7 +703,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/MFD37/03-DOSTAD000/telemetered/dosta_abcdjm_ctdbp_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -714,7 +714,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSPM/WFP01/02-DOFSTK000/telemetered/dofst_k_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dofst_k_oxygen_l2'
@@ -729,7 +729,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'Hz'
 	    var_list[3].units = 'dbar'
     #ADCP
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/RID26/01-ADCPTA000/telemetered/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -755,7 +755,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/RID26/01-ADCPTC000/telemetered/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -781,7 +781,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/RID26/01-ADCPTA000/telemetered/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -807,7 +807,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/RID26/01-ADCPTC000/telemetered/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -833,7 +833,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/MFD35/04-ADCPTM000/telemetered/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -859,7 +859,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/MFD35/04-ADCPTM000/telemetered/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -885,7 +885,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/MFD35/04-ADCPTC000/telemetered/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -911,7 +911,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/MFD35/04-ADCPSJ000/telemetered/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -938,48 +938,48 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
     #ZPLSC
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/MFD37/07-ZPLSCC000/telemetered/zplsc_c_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/MFD37/07-ZPLSCC000/telemetered/zplsc_c_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/MFD37/07-ZPLSCC000/telemetered/zplsc_c_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/MFD37/07-ZPLSCC000/telemetered/zplsc_c_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/MFD37/07-ZPLSCC000/recovered_host/zplsc_c_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/MFD37/07-ZPLSCC000/recovered_host/zplsc_c_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/MFD37/07-ZPLSCC000/recovered_host/zplsc_c_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/MFD37/07-ZPLSCC000/recovered_host/zplsc_c_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
     #WAVSS
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_statistics'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_zero_crossings'
@@ -1026,7 +1026,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[12].units = 'm'
 	    var_list[13].units = 'degrees'
 	    var_list[14].units = 'degrees'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_statistics'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_zero_crossings'
@@ -1073,7 +1073,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[12].units = 'm'
 	    var_list[13].units = 'degrees'
 	    var_list[14].units = 'degrees'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_statistics'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_zero_crossings'
@@ -1120,7 +1120,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[12].units = 'm'
 	    var_list[13].units = 'degrees'
 	    var_list[14].units = 'degrees'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_statistics'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_zero_crossings'
@@ -1168,7 +1168,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[13].units = 'degrees'
 	    var_list[14].units = 'degrees'
     #VELPT
-	elif mooring_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/SBD17/04-VELPTA000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -1197,7 +1197,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/SBD11/04-VELPTA000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -1226,7 +1226,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/SBD11/04-VELPTA000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -1255,7 +1255,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/SBD17/04-VELPTA000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -1284,7 +1284,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/SBD11/04-VELPTA000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -1313,7 +1313,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/SBD11/04-VELPTA000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -1342,7 +1342,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/RID16/04-VELPTA000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -1371,7 +1371,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/RID26/04-VELPTA000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -1400,7 +1400,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/RID26/04-VELPTA000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -1429,7 +1429,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/RID16/04-VELPTA000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -1458,7 +1458,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/RID26/04-VELPTA000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -1487,7 +1487,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/RID26/04-VELPTA000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -1517,7 +1517,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
     #PCO2W
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'PCO2W' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'PCO2W' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/RID16/05-PCO2WB000/telemetered/pco2w_abc_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -1528,7 +1528,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/MFD35/05-PCO2WB000/telemetered/pco2w_abc_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -1539,7 +1539,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'PCO2W' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'PCO2W' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/RID16/05-PCO2WB000/telemetered/pco2w_abc_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -1550,7 +1550,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/MFD35/05-PCO2WB000/telemetered/pco2w_abc_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -1561,7 +1561,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/MFD35/05-PCO2WB000/telemetered/pco2w_abc_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -1572,7 +1572,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/MFD35/05-PCO2WB000/telemetered/pco2w_abc_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -1584,7 +1584,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
     #PHSEN
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/RID16/06-PHSEND000/telemetered/phsen_abcdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -1595,7 +1595,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/RID26/06-PHSEND000/telemetered/phsen_abcdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -1606,7 +1606,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/RID26/06-PHSEND000/telemetered/phsen_abcdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -1617,7 +1617,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/RID16/06-PHSEND000/telemetered/phsen_abcdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -1628,7 +1628,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/RID26/06-PHSEND000/telemetered/phsen_abcdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -1639,7 +1639,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/RID26/06-PHSEND000/telemetered/phsen_abcdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -1650,7 +1650,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/MFD35/06-PHSEND000/telemetered/phsen_abcdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -1661,7 +1661,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/MFD35/06-PHSEND000/telemetered/phsen_abcdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -1672,7 +1672,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/MFD35/06-PHSEND000/telemetered/phsen_abcdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -1683,7 +1683,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/MFD35/06-PHSEND000/telemetered/phsen_abcdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -1695,7 +1695,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
     #SPKIR
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/RID16/08-SPKIRB000/telemetered/spkir_abj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -1703,7 +1703,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/RID26/08-SPKIRB000/telemetered/spkir_abj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -1711,7 +1711,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/RID26/08-SPKIRB000/telemetered/spkir_abj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -1719,7 +1719,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/RID16/08-SPKIRB000/telemetered/spkir_abj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -1727,7 +1727,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/RID26/08-SPKIRB000/telemetered/spkir_abj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -1735,7 +1735,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/RID26/08-SPKIRB000/telemetered/spkir_abj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -1744,7 +1744,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
     #PRESF
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/MFD35/02-PRESFA000/telemetered/presf_abc_dcl_tide_measurement'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'abs_seafloor_pressure'
@@ -1755,7 +1755,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/MFD35/02-PRESFA000/telemetered/presf_abc_dcl_tide_measurement'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'abs_seafloor_pressure'
@@ -1766,7 +1766,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/MFD35/02-PRESFB000/telemetered/presf_abc_dcl_tide_measurement'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'abs_seafloor_pressure'
@@ -1777,7 +1777,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/MFD35/02-PRESFC000/telemetered/presf_abc_dcl_tide_measurement'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'abs_seafloor_pressure'
@@ -1789,7 +1789,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
     #CTDBP
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/RID16/03-CTDBPC000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -1809,7 +1809,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/MFD37/03-CTDBPC000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -1829,7 +1829,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/SBD17/06-CTDBPC000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -1849,7 +1849,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/RID16/03-CTDBPC000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -1869,7 +1869,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/MFD37/03-CTDBPC000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -1889,7 +1889,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/SBD17/06-CTDBPC000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -1909,7 +1909,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/RID27/03-CTDBPC000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -1929,7 +1929,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/RID27/03-CTDBPC000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -1949,7 +1949,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/RID27/03-CTDBPC000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -1969,7 +1969,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/RID27/03-CTDBPC000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -1989,7 +1989,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/MFD37/03-CTDBPC000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -2009,7 +2009,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/MFD37/03-CTDBPE000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -2030,7 +2030,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
     #VEL3D
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/MFD35/01-VEL3DD000/telemetered/vel3d_cd_dcl_velocity_data'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_c_eastward_turbulent_velocity'
@@ -2047,7 +2047,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'm/s'
 	    var_list[3].units = 'm/s'
 	    var_list[4].units = '0.001dbar'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/MFD35/01-VEL3DD000/telemetered/vel3d_cd_dcl_velocity_data'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_c_eastward_turbulent_velocity'
@@ -2064,7 +2064,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'm/s'
 	    var_list[3].units = 'm/s'
 	    var_list[4].units = '0.001dbar'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/MFD35/01-VEL3DD000/telemetered/vel3d_cd_dcl_velocity_data'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_c_eastward_turbulent_velocity'
@@ -2081,7 +2081,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'm/s'
 	    var_list[3].units = 'm/s'
 	    var_list[4].units = '0.001dbar'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/MFD35/01-VEL3DD000/telemetered/vel3d_cd_dcl_velocity_data'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_c_eastward_turbulent_velocity'
@@ -2099,7 +2099,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'm/s'
 	    var_list[4].units = '0.001dbar'
     #VEL3DK
-	elif mooring_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'Telemetered':
+	elif platform_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSPM/WFP01/01-VEL3DK000/telemetered/vel3d_k_wfp_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_k_eastward_velocity'
@@ -2125,7 +2125,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'ddegrees'
 	    var_list[6].units = 'ddegrees'
 	    var_list[7].units = 'dbar'
-	elif mooring_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSPM/WFP01/03-CTDPFK000/telemetered/ctdpf_ckl_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdpf_ckl_seawater_temperature'
@@ -2146,7 +2146,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
     #PCO2A
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/SBD12/04-PCO2AA000/telemetered/pco2a_a_dcl_instrument_water'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'partial_pressure_co2_ssw'
@@ -2160,7 +2160,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'uatm'
 	    var_list[2].units = 'uatm'
 	    var_list[3].units = 'mol m-2 s-1'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/SBD12/04-PCO2AA000/telemetered/pco2a_a_dcl_instrument_water'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'partial_pressure_co2_ssw'
@@ -2174,7 +2174,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'uatm'
 	    var_list[2].units = 'uatm'
 	    var_list[3].units = 'mol m-2 s-1'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/SBD12/04-PCO2AA000/telemetered/pco2a_a_dcl_instrument_water'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'partial_pressure_co2_ssw'
@@ -2188,7 +2188,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'uatm'
 	    var_list[2].units = 'uatm'
 	    var_list[3].units = 'mol m-2 s-1'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/SBD12/04-PCO2AA000/telemetered/pco2a_a_dcl_instrument_water'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'partial_pressure_co2_ssw'
@@ -2203,7 +2203,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'uatm'
 	    var_list[3].units = 'mol m-2 s-1'
     #PARAD
-	elif mooring_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSPM/WFP01/05-PARADK000/telemetered/parad_k__stc_imodem_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_k_par'
@@ -2215,58 +2215,58 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
     #OPTAA
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/RID16/01-OPTAAD000/telemetered/optaa_dj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/RID27/01-OPTAAD000/telemetered/optaa_dj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/RID27/01-OPTAAD000/telemetered/optaa_dj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/RID16/01-OPTAAD000/telemetered/optaa_dj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/RID27/01-OPTAAD000/telemetered/optaa_dj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/RID27/01-OPTAAD000/telemetered/optaa_dj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/MFD37/01-OPTAAD000/telemetered/optaa_dj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/MFD37/01-OPTAAD000/telemetered/optaa_dj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/MFD37/01-OPTAAD000/telemetered/optaa_dj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/MFD37/01-OPTAAC000/telemetered/optaa_dj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
     #NUTNR
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSM/RID16/07-NUTNRB000/telemetered/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -2277,7 +2277,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/RID26/07-NUTNRB000/telemetered/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -2288,7 +2288,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/RID26/07-NUTNRB000/telemetered/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -2299,7 +2299,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSM/RID16/07-NUTNRB000/telemetered/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -2310,7 +2310,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/RID26/07-NUTNRB000/telemetered/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -2321,7 +2321,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/RID26/07-NUTNRB000/telemetered/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -2334,43 +2334,43 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
     ##
     #MOPAK
-	elif mooring_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/SBD17/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/SBD11/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/SBD11/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/SBD17/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/SBD11/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/SBD11/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE09OSPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSPM/SBS01/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
     #METBK
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/SBD11/06-METBKA000/recovered_host/metbk_a_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sea_surface_temperature'
@@ -2429,7 +2429,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[16].units = 'm/s'
 	    var_list[17].units = 'm/s'
 	    var_list[18].units = 'g/kg'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/SBD11/06-METBKA000/recovered_host/metbk_a_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sea_surface_temperature'
@@ -2488,7 +2488,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[16].units = 'm/s'
 	    var_list[17].units = 'm/s'
 	    var_list[18].units = 'g/kg'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/SBD11/06-METBKA000/recovered_host/metbk_a_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sea_surface_temperature'
@@ -2547,7 +2547,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[16].units = 'm/s'
 	    var_list[17].units = 'm/s'
 	    var_list[18].units = 'g/kg'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/SBD11/06-METBKA000/recovered_host/metbk_a_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sea_surface_temperature'
@@ -2607,7 +2607,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[17].units = 'm/s'
 	    var_list[18].units = 'g/kg'
     #FLORT
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/RID16/02-FLORTD000/recovered_host/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -2627,7 +2627,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/SBD17/06-FLORTD000/recovered_host/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -2647,7 +2647,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/RID16/02-FLORTD000/recovered_host/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -2667,7 +2667,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/SBD17/06-FLORTD000/recovered_host/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -2687,7 +2687,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/RID27/02-FLORTD000/recovered_host/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -2707,7 +2707,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/RID27/02-FLORTD000/recovered_host/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -2727,7 +2727,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/RID27/02-FLORTD000/recovered_host/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -2747,7 +2747,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/RID27/02-FLORTD000/recovered_host/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -2768,13 +2768,13 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
     #FDCHP
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'FDCHP' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'FDCHP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/SBD12/08-FDCHPA000/recovered_host/fdchp_a_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
     #DOSTA
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/RID16/03-DOSTAD000/recovered_host/dosta_abcdjm_ctdbp_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -2791,7 +2791,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/RID27/04-DOSTAD000/recovered_host/dosta_abcdjm_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -2808,7 +2808,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/RID27/04-DOSTAD000/recovered_host/dosta_abcdjm_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -2825,7 +2825,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/RID16/03-DOSTAD000/recovered_host/dosta_abcdjm_ctdbp_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -2842,7 +2842,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/RID27/04-DOSTAD000/recovered_host/dosta_abcdjm_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -2859,7 +2859,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/RID27/04-DOSTAD000/recovered_host/dosta_abcdjm_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -2876,7 +2876,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/MFD37/03-DOSTAD000/recovered_host/dosta_abcdjm_ctdbp_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -2887,7 +2887,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/MFD37/03-DOSTAD000/recovered_host/dosta_abcdjm_ctdbp_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -2898,7 +2898,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/MFD37/03-DOSTAD000/recovered_host/dosta_abcdjm_ctdbp_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -2909,7 +2909,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/MFD37/03-DOSTAD000/recovered_host/dosta_abcdjm_ctdbp_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -2921,7 +2921,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
     #ADCP
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/RID26/01-ADCPTA000/recovered_host/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -2947,7 +2947,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/RID26/01-ADCPTC000/recovered_host/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -2973,7 +2973,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/RID26/01-ADCPTA000/recovered_host/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -2999,7 +2999,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/RID26/01-ADCPTC000/recovered_host/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -3025,7 +3025,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/MFD35/04-ADCPTM000/recovered_host/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -3051,7 +3051,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/MFD35/04-ADCPTM000/recovered_host/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -3077,7 +3077,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/MFD35/04-ADCPTC000/recovered_host/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -3103,7 +3103,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/MFD35/04-ADCPSJ000/recovered_host/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -3130,7 +3130,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
     #WAVSS
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_statistics_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_zero_crossings'
@@ -3177,7 +3177,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[12].units = 'm'
 	    var_list[13].units = 'degrees'
 	    var_list[14].units = 'degrees'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_statistics_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_zero_crossings'
@@ -3224,7 +3224,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[12].units = 'm'
 	    var_list[13].units = 'degrees'
 	    var_list[14].units = 'degrees'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_statistics_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_zero_crossings'
@@ -3271,7 +3271,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[12].units = 'm'
 	    var_list[13].units = 'degrees'
 	    var_list[14].units = 'degrees'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_statistics_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_zero_crossings'
@@ -3319,7 +3319,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[13].units = 'degrees'
 	    var_list[14].units = 'degrees'
     #VELPT
-	elif mooring_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/SBD17/04-VELPTA000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -3348,7 +3348,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/SBD11/04-VELPTA000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -3377,7 +3377,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/SBD11/04-VELPTA000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -3406,7 +3406,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredHost':
     #uframe_dataset_name = 'CE06ISSM/RID16/04-VELPTA000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    uframe_dataset_name = 'CE06ISSM/RID16/04-VELPTA000/recovered_host/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
@@ -3436,7 +3436,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/SBD11/04-VELPTA000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -3465,7 +3465,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/SBD11/04-VELPTA000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -3494,7 +3494,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/RID16/04-VELPTA000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -3523,7 +3523,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/RID26/04-VELPTA000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -3552,7 +3552,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/RID26/04-VELPTA000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -3581,7 +3581,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/RID16/04-VELPTA000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -3610,7 +3610,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/RID26/04-VELPTA000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -3639,7 +3639,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/RID26/04-VELPTA000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -3669,7 +3669,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
     #PCO2W
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/RID16/05-PCO2WB000/recovered_host/pco2w_abc_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -3680,7 +3680,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/MFD35/05-PCO2WB000/recovered_host/pco2w_abc_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -3691,7 +3691,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/RID16/05-PCO2WB000/recovered_host/pco2w_abc_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -3702,7 +3702,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/MFD35/05-PCO2WB000/recovered_host/pco2w_abc_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -3713,7 +3713,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/MFD35/05-PCO2WB000/recovered_host/pco2w_abc_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -3724,7 +3724,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/MFD35/05-PCO2WB000/recovered_host/pco2w_abc_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -3736,7 +3736,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
     #PHSEN
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/RID16/06-PHSEND000/recovered_host/phsen_abcdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -3747,7 +3747,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/RID26/06-PHSEND000/recovered_host/phsen_abcdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -3758,7 +3758,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/RID26/06-PHSEND000/recovered_host/phsen_abcdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -3769,7 +3769,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/RID16/06-PHSEND000/recovered_host/phsen_abcdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -3780,7 +3780,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/RID26/06-PHSEND000/recovered_host/phsen_abcdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -3791,7 +3791,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/RID26/06-PHSEND000/recovered_host/phsen_abcdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -3802,7 +3802,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/MFD35/06-PHSEND000/recovered_host/phsen_abcdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -3813,7 +3813,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/MFD35/06-PHSEND000/recovered_host/phsen_abcdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -3824,7 +3824,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/MFD35/06-PHSEND000/recovered_host/phsen_abcdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -3835,7 +3835,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/MFD35/06-PHSEND000/recovered_host/phsen_abcdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -3847,7 +3847,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
     #SPKIR
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/RID16/08-SPKIRB000/recovered_host/spkir_abj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -3855,7 +3855,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/RID26/08-SPKIRB000/recovered_host/spkir_abj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -3863,7 +3863,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/RID26/08-SPKIRB000/recovered_host/spkir_abj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -3871,7 +3871,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/RID16/08-SPKIRB000/recovered_host/spkir_abj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -3879,7 +3879,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/RID26/08-SPKIRB000/recovered_host/spkir_abj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -3887,7 +3887,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/RID26/08-SPKIRB000/recovered_host/spkir_abj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -3896,7 +3896,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
     #PRESF
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/MFD35/02-PRESFA000/recovered_host/presf_abc_dcl_tide_measurement_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'abs_seafloor_pressure'
@@ -3907,7 +3907,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/MFD35/02-PRESFA000/recovered_host/presf_abc_dcl_tide_measurement_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'abs_seafloor_pressure'
@@ -3918,7 +3918,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/MFD35/02-PRESFB000/recovered_host/presf_abc_dcl_tide_measurement_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'abs_seafloor_pressure'
@@ -3929,7 +3929,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/MFD35/02-PRESFC000/recovered_host/presf_abc_dcl_tide_measurement_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'abs_seafloor_pressure'
@@ -3941,7 +3941,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
     #CTDBP
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/RID16/03-CTDBPC000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -3961,7 +3961,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/MFD37/03-CTDBPC000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -3981,7 +3981,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/SBD17/06-CTDBPC000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -4001,7 +4001,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/RID16/03-CTDBPC000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -4021,7 +4021,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/MFD37/03-CTDBPC000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -4041,7 +4041,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/SBD17/06-CTDBPC000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -4061,7 +4061,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/RID27/03-CTDBPC000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -4081,7 +4081,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/RID27/03-CTDBPC000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -4101,7 +4101,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/RID27/03-CTDBPC000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -4121,7 +4121,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/RID27/03-CTDBPC000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -4141,7 +4141,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/MFD37/03-CTDBPC000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -4161,7 +4161,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/MFD37/03-CTDBPE000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -4182,7 +4182,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
     #VEL3D
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/MFD35/01-VEL3DD000/recovered_host/vel3d_cd_dcl_velocity_data_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_c_eastward_turbulent_velocity'
@@ -4199,7 +4199,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'm/s'
 	    var_list[3].units = 'm/s'
 	    var_list[4].units = '0.001dbar'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/MFD35/01-VEL3DD000/recovered_host/vel3d_cd_dcl_velocity_data_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_c_eastward_turbulent_velocity'
@@ -4216,7 +4216,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'm/s'
 	    var_list[3].units = 'm/s'
 	    var_list[4].units = '0.001dbar'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/MFD35/01-VEL3DD000/recovered_host/vel3d_cd_dcl_velocity_data_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_c_eastward_turbulent_velocity'
@@ -4233,7 +4233,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'm/s'
 	    var_list[3].units = 'm/s'
 	    var_list[4].units = '0.001dbar'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/MFD35/01-VEL3DD000/recovered_host/vel3d_cd_dcl_velocity_data_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_c_eastward_turbulent_velocity'
@@ -4251,7 +4251,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'm/s'
 	    var_list[4].units = '0.001dbar'
     #PCO2A
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/SBD12/04-PCO2AA000/recovered_host/pco2a_a_dcl_instrument_water_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'partial_pressure_co2_ssw'
@@ -4265,7 +4265,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'uatm'
 	    var_list[2].units = 'uatm'
 	    var_list[3].units = 'mol m-2 s-1'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/SBD12/04-PCO2AA000/recovered_host/pco2a_a_dcl_instrument_water_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'partial_pressure_co2_ssw'
@@ -4279,7 +4279,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'uatm'
 	    var_list[2].units = 'uatm'
 	    var_list[3].units = 'mol m-2 s-1'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/SBD12/04-PCO2AA000/recovered_host/pco2a_a_dcl_instrument_water_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'partial_pressure_co2_ssw'
@@ -4293,7 +4293,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'uatm'
 	    var_list[2].units = 'uatm'
 	    var_list[3].units = 'mol m-2 s-1'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/SBD12/04-PCO2AA000/recovered_host/pco2a_a_dcl_instrument_water_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'partial_pressure_co2_ssw'
@@ -4308,58 +4308,58 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'uatm'
 	    var_list[3].units = 'mol m-2 s-1'
     #OPTAA
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/RID16/01-OPTAAD000/recovered_host/optaa_dj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/RID27/01-OPTAAD000/recovered_host/optaa_dj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/RID27/01-OPTAAD000/recovered_host/optaa_dj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/RID16/01-OPTAAD000/recovered_host/optaa_dj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/RID27/01-OPTAAD000/recovered_host/optaa_dj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/RID27/01-OPTAAD000/recovered_host/optaa_dj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/MFD37/01-OPTAAD000/recovered_host/optaa_dj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/MFD37/01-OPTAAD000/recovered_host/optaa_dj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/MFD37/01-OPTAAD000/recovered_host/optaa_dj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/MFD37/01-OPTAAC000/recovered_host/optaa_dj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
     #NUTNR
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE01ISSM/RID16/07-NUTNRB000/recovered_host/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -4370,7 +4370,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/RID26/07-NUTNRB000/recovered_host/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -4381,7 +4381,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/RID26/07-NUTNRB000/recovered_host/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -4392,7 +4392,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE06ISSM/RID16/07-NUTNRB000/recovered_host/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -4403,7 +4403,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/RID26/07-NUTNRB000/recovered_host/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -4414,7 +4414,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/RID26/07-NUTNRB000/recovered_host/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -4425,7 +4425,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/RID16/03-CTDBPC000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -4445,7 +4445,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/MFD37/03-CTDBPC000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -4465,7 +4465,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/SBD17/06-CTDBPC000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -4485,7 +4485,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/RID16/03-CTDBPC000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -4505,7 +4505,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/MFD37/03-CTDBPC000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -4525,7 +4525,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/SBD17/06-CTDBPC000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -4545,7 +4545,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE02SHSM/RID27/03-CTDBPC000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -4565,7 +4565,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE07SHSM/RID27/03-CTDBPC000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -4585,7 +4585,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE04OSSM/RID27/03-CTDBPC000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -4605,7 +4605,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE09OSSM/RID27/03-CTDBPC000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -4625,7 +4625,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE07SHSM/MFD37/03-CTDBPC000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -4645,7 +4645,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE09OSSM/MFD37/03-CTDBPE000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -4665,7 +4665,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
+	elif platform_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CE09OSPM/WFP01/03-CTDPFK000/recovered_wfp/ctdpf_ckl_wfp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdpf_ckl_seawater_temperature'
@@ -4685,7 +4685,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE02SHSM/RID26/01-ADCPTA000/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -4711,7 +4711,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE04OSSM/RID26/01-ADCPTC000/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -4737,7 +4737,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE07SHSM/RID26/01-ADCPTA000/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -4763,7 +4763,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE09OSSM/RID26/01-ADCPTC000/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -4789,7 +4789,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/MFD35/04-ADCPTM000/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -4815,7 +4815,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/MFD35/04-ADCPTM000/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -4841,7 +4841,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE07SHSM/MFD35/04-ADCPTC000/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -4867,7 +4867,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE09OSSM/MFD35/04-ADCPSJ000/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -4893,27 +4893,27 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/MFD37/07-ZPLSCC000/recovered_inst/zplsc_echogram_data'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/MFD37/07-ZPLSCC000/recovered_inst/zplsc_echogram_data'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredInst':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE07SHSM/MFD37/07-ZPLSCC000/recovered_inst/zplsc_echogram_data'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredInst':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE09OSSM/MFD37/07-ZPLSCC000/recovered_inst/zplsc_echogram_data'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/SBD17/04-VELPTA000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -4942,7 +4942,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE02SHSM/SBD11/04-VELPTA000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -4971,7 +4971,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE04OSSM/SBD11/04-VELPTA000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -5000,7 +5000,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/SBD17/04-VELPTA000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -5029,7 +5029,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE07SHSM/SBD11/04-VELPTA000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -5058,7 +5058,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE09OSSM/SBD11/04-VELPTA000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -5087,7 +5087,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/RID16/04-VELPTA000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -5116,7 +5116,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE02SHSM/RID26/04-VELPTA000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -5145,7 +5145,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE04OSSM/RID26/04-VELPTA000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -5174,7 +5174,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/RID16/04-VELPTA000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -5203,7 +5203,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE07SHSM/RID26/04-VELPTA000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -5232,7 +5232,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE09OSSM/RID26/04-VELPTA000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -5261,7 +5261,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
+	elif platform_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CE09OSPM/WFP01/01-VEL3DK000/recovered_wfp/vel3d_k_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_k_eastward_velocity'
@@ -5287,7 +5287,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'ddegrees'
 	    var_list[6].units = 'ddegrees'
 	    var_list[7].units = 'dbar'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/MFD35/01-VEL3DD000/recovered_inst/vel3d_cd_dcl_velocity_data_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_c_eastward_turbulent_velocity'
@@ -5304,7 +5304,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'm/s'
 	    var_list[3].units = 'm/s'
 	    var_list[4].units = '0.001dbar'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/MFD35/01-VEL3DD000/recovered_inst/vel3d_cd_dcl_velocity_data_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_c_eastward_turbulent_velocity'
@@ -5321,7 +5321,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'm/s'
 	    var_list[3].units = 'm/s'
 	    var_list[4].units = '0.001dbar'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'RecoveredInst':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE07SHSM/MFD35/01-VEL3DD000/recovered_inst/vel3d_cd_dcl_velocity_data_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_c_eastward_turbulent_velocity'
@@ -5338,7 +5338,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'm/s'
 	    var_list[3].units = 'm/s'
 	    var_list[4].units = '0.001dbar'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'RecoveredInst':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'VEL3D' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE09OSSM/MFD35/01-VEL3DD000/recovered_inst/vel3d_cd_dcl_velocity_data_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_c_eastward_turbulent_velocity'
@@ -5355,7 +5355,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'm/s'
 	    var_list[3].units = 'm/s'
 	    var_list[4].units = '0.001dbar'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/MFD35/02-PRESFA000/recovered_inst/presf_abc_tide_measurement_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'presf_tide_pressure'
@@ -5366,7 +5366,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/MFD35/02-PRESFA000/recovered_inst/presf_abc_tide_measurement_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'presf_tide_pressure'
@@ -5377,7 +5377,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredInst':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE07SHSM/MFD35/02-PRESFB000/recovered_inst/presf_abc_tide_measurement_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'presf_tide_pressure'
@@ -5388,7 +5388,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredInst':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE09OSSM/MFD35/02-PRESFC000/recovered_inst/presf_abc_tide_measurement_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'presf_tide_pressure'
@@ -5399,7 +5399,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/RID16/06-PHSEND000/recovered_inst/phsen_abcdef_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -5410,7 +5410,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE02SHSM/RID26/06-PHSEND000/recovered_inst/phsen_abcdef_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -5421,7 +5421,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE04OSSM/RID26/06-PHSEND000/recovered_inst/phsen_abcdef_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -5432,7 +5432,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/RID16/06-PHSEND000/recovered_inst/phsen_abcdef_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -5443,7 +5443,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE07SHSM/RID26/06-PHSEND000/recovered_inst/phsen_abcdef_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -5454,7 +5454,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE09OSSM/RID26/06-PHSEND000/recovered_inst/phsen_abcdef_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -5465,7 +5465,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/MFD35/06-PHSEND000/recovered_inst/phsen_abcdef_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -5476,7 +5476,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/MFD35/06-PHSEND000/recovered_inst/phsen_abcdef_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -5487,7 +5487,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE07SHSM/MFD35/06-PHSEND000/recovered_inst/phsen_abcdef_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -5498,7 +5498,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE09OSSM/MFD35/06-PHSEND000/recovered_inst/phsen_abcdef_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -5509,7 +5509,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/RID16/05-PCO2WB000/recovered_inst/pco2w_abc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -5520,7 +5520,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/MFD35/05-PCO2WB000/recovered_inst/pco2w_abc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -5531,7 +5531,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/RID16/05-PCO2WB000/recovered_inst/pco2w_abc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -5542,7 +5542,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/MFD35/05-PCO2WB000/recovered_inst/pco2w_abc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -5553,7 +5553,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE07SHSM/MFD35/05-PCO2WB000/recovered_inst/pco2w_abc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -5564,7 +5564,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE09OSSM/MFD35/05-PCO2WB000/recovered_inst/pco2w_abc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -5575,7 +5575,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredWFP':
+	elif platform_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CE09OSPM/WFP01/05-PARADK000/recovered_wfp/parad_k__stc_imodem_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_k_par'
@@ -5586,7 +5586,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/RID16/07-NUTNRB000/recovered_inst/suna_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -5597,7 +5597,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
+	elif platform_name == 'CE02SHSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE02SHSM/RID26/07-NUTNRB000/recovered_inst/suna_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -5608,7 +5608,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
+	elif platform_name == 'CE04OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE04OSSM/RID26/07-NUTNRB000/recovered_inst/suna_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -5619,7 +5619,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/RID16/07-NUTNRB000/recovered_inst/suna_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -5630,7 +5630,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
+	elif platform_name == 'CE07SHSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE07SHSM/RID26/07-NUTNRB000/recovered_inst/suna_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -5641,7 +5641,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
+	elif platform_name == 'CE09OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE09OSSM/RID26/07-NUTNRB000/recovered_inst/suna_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -5652,12 +5652,12 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'FDCHP' and method == 'RecoveredInst':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'FDCHP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE02SHSM/SBD12/08-FDCHPA000/recovered_inst/fdchp_a_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'FLORT' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'BUOY' and instrument_class == 'FLORT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/SBD17/06-FLORTD000/recovered_inst/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -5677,7 +5677,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'FLORT' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'BUOY' and instrument_class == 'FLORT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/SBD17/06-FLORTD000/recovered_inst/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -5697,7 +5697,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
+	elif platform_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CE09OSPM/WFP01/04-FLORTK000/recovered_wfp/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -5720,7 +5720,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
+	elif platform_name == 'CE09OSPM' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CE09OSPM/WFP01/02-DOFSTK000/recovered_wfp/dofst_k_wfp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dofst_k_oxygen_l2'
@@ -5734,7 +5734,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'Hz'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/RID16/03-DOSTAD000/recovered_inst/dosta_abcdjm_ctdbp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -5748,7 +5748,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
-	elif mooring_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/RID16/03-DOSTAD000/recovered_inst/dosta_abcdjm_ctdbp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -5762,7 +5762,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/MFD37/03-DOSTAD000/recovered_inst/dosta_abcdjm_ctdbp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -5776,7 +5776,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/MFD37/03-DOSTAD000/recovered_inst/dosta_abcdjm_ctdbp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -5790,7 +5790,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
-	elif mooring_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredInst':
+	elif platform_name == 'CE07SHSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE07SHSM/MFD37/03-DOSTAD000/recovered_inst/dosta_abcdjm_ctdbp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -5804,7 +5804,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
-	elif mooring_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredInst':
+	elif platform_name == 'CE09OSSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE09OSSM/MFD37/03-DOSTAD000/recovered_inst/dosta_abcdjm_ctdbp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -5818,7 +5818,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
-	elif mooring_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'WAVSS_Stats' and method == 'RecoveredInst':
+	elif platform_name == 'CE01ISSM' and node == 'MFN' and instrument_class == 'WAVSS_Stats' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE01ISSM/MFD35/04-ADCPTM000/recovered_inst/adcpt_m_instrument_log9_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'significant_wave_height'
@@ -5832,7 +5832,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'meters'
 	    var_list[2].units = 'seconds'
 	    var_list[3].units = 'degrees'
-	elif mooring_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'WAVSS_Stats' and method == 'RecoveredInst':
+	elif platform_name == 'CE06ISSM' and node == 'MFN' and instrument_class == 'WAVSS_Stats' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE06ISSM/MFD35/04-ADCPTM000/recovered_inst/adcpt_m_instrument_log9_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'significant_wave_height'
@@ -5846,7 +5846,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'meters'
 	    var_list[2].units = 'seconds'
 	    var_list[3].units = 'degrees'
-	elif mooring_name == 'CE02SHBP' and node == 'BEP' and instrument_class == 'CTD' and method == 'Streamed':
+	elif platform_name == 'CE02SHBP' and node == 'BEP' and instrument_class == 'CTD' and method == 'Streamed':
 	    uframe_dataset_name = 'CE02SHBP/LJ01D/06-CTDBPN106/streamed/ctdbp_no_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_temperature'
@@ -5866,7 +5866,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE04OSBP' and node == 'BEP' and instrument_class == 'CTD' and method == 'Streamed':
+	elif platform_name == 'CE04OSBP' and node == 'BEP' and instrument_class == 'CTD' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSBP/LJ01C/06-CTDBPO108/streamed/ctdbp_no_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_temperature'
@@ -5886,7 +5886,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE02SHBP' and node == 'BEP' and instrument_class == 'DOSTA' and method == 'Streamed':
+	elif platform_name == 'CE02SHBP' and node == 'BEP' and instrument_class == 'DOSTA' and method == 'Streamed':
 	    uframe_dataset_name = 'CE02SHBP/LJ01D/06-CTDBPN106/streamed/ctdbp_no_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -5897,7 +5897,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE04OSBP' and node == 'BEP' and instrument_class == 'DOSTA' and method == 'Streamed':
+	elif platform_name == 'CE04OSBP' and node == 'BEP' and instrument_class == 'DOSTA' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSBP/LJ01C/06-CTDBPO108/streamed/ctdbp_no_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -5908,7 +5908,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CE02SHBP' and node == 'BEP' and instrument_class == 'PHSEN' and method == 'Streamed':
+	elif platform_name == 'CE02SHBP' and node == 'BEP' and instrument_class == 'PHSEN' and method == 'Streamed':
 	    uframe_dataset_name = 'CE02SHBP/LJ01D/10-PHSEND103/streamed/phsen_data_record'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -5919,7 +5919,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE04OSBP' and node == 'BEP' and instrument_class == 'PHSEN' and method == 'Streamed':
+	elif platform_name == 'CE04OSBP' and node == 'BEP' and instrument_class == 'PHSEN' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSBP/LJ01C/10-PHSEND107/streamed/phsen_data_record'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -5930,7 +5930,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE02SHBP' and node == 'BEP' and instrument_class == 'PCO2W' and method == 'Streamed':
+	elif platform_name == 'CE02SHBP' and node == 'BEP' and instrument_class == 'PCO2W' and method == 'Streamed':
 	    uframe_dataset_name = 'CE02SHBP/LJ01D/09-PCO2WB103/streamed/pco2w_b_sami_data_record'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -5941,7 +5941,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE04OSBP' and node == 'BEP' and instrument_class == 'PCO2W' and method == 'Streamed':
+	elif platform_name == 'CE04OSBP' and node == 'BEP' and instrument_class == 'PCO2W' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSBP/LJ01C/09-PCO2WB104/streamed/pco2w_b_sami_data_record'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -5952,7 +5952,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CE02SHBP' and node == 'BEP' and instrument_class == 'ADCP' and method == 'Streamed':
+	elif platform_name == 'CE02SHBP' and node == 'BEP' and instrument_class == 'ADCP' and method == 'Streamed':
 	    uframe_dataset_name = 'CE02SHBP/LJ01D/05-ADCPTB104/streamed/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -5978,7 +5978,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE04OSBP' and node == 'BEP' and instrument_class == 'ADCP' and method == 'Streamed':
+	elif platform_name == 'CE04OSBP' and node == 'BEP' and instrument_class == 'ADCP' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSBP/LJ01C/05-ADCPSI103/streamed/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -6004,7 +6004,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CE02SHBP' and node == 'BEP' and instrument_class == 'VEL3D' and method == 'Streamed':
+	elif platform_name == 'CE02SHBP' and node == 'BEP' and instrument_class == 'VEL3D' and method == 'Streamed':
 	    uframe_dataset_name = 'CE02SHBP/LJ01D/07-VEL3DC108/streamed/vel3d_cd_velocity_data'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_c_eastward_turbulent_velocity'
@@ -6021,7 +6021,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'm/s'
 	    var_list[3].units = 'm/s'
 	    var_list[4].units = '0.001dbar'
-	elif mooring_name == 'CE04OSBP' and node == 'BEP' and instrument_class == 'VEL3D' and method == 'Streamed':
+	elif platform_name == 'CE04OSBP' and node == 'BEP' and instrument_class == 'VEL3D' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSBP/LJ01C/07-VEL3DC107/streamed/vel3d_cd_velocity_data'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_c_eastward_turbulent_velocity'
@@ -6038,18 +6038,18 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'm/s'
 	    var_list[3].units = 'm/s'
 	    var_list[4].units = '0.001dbar'
-	elif mooring_name == 'CE02SHBP' and node == 'BEP' and instrument_class == 'OPTAA' and method == 'Streamed':
+	elif platform_name == 'CE02SHBP' and node == 'BEP' and instrument_class == 'OPTAA' and method == 'Streamed':
 	    uframe_dataset_name = 'CE02SHBP/LJ01D/08-OPTAAD106/streamed/optaa_sample'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CE04OSBP' and node == 'BEP' and instrument_class == 'OPTAA' and method == 'Streamed':
+	elif platform_name == 'CE04OSBP' and node == 'BEP' and instrument_class == 'OPTAA' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSBP/LJ01C/08-OPTAAC104/streamed/optaa_sample'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
     #CSPP Data below
-	elif mooring_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSP/SP001/08-FLORTJ000/telemetered/flort_dj_cspp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -6072,7 +6072,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE01ISSP/SP001/08-FLORTJ000/recovered_cspp/flort_dj_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -6095,7 +6095,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSP/SP001/08-FLORTJ000/telemetered/flort_dj_cspp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -6118,7 +6118,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE06ISSP/SP001/08-FLORTJ000/recovered_cspp/flort_dj_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -6141,7 +6141,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSP/SP001/02-DOSTAJ000/telemetered/dosta_abcdjm_cspp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -6161,7 +6161,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'umol/L'
 	    var_list[4].units = 'degC'
 	    var_list[5].units = 'dbar'
-	elif mooring_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE01ISSP/SP001/02-DOSTAJ000/recovered_cspp/dosta_abcdjm_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -6181,7 +6181,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'umol/L'
 	    var_list[4].units = 'degC'
 	    var_list[5].units = 'dbar'
-	elif mooring_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSP/SP001/02-DOSTAJ000/telemetered/dosta_abcdjm_cspp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -6201,7 +6201,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'umol/L'
 	    var_list[4].units = 'degC'
 	    var_list[5].units = 'dbar'
-	elif mooring_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE06ISSP/SP001/02-DOSTAJ000/recovered_cspp/dosta_abcdjm_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -6221,7 +6221,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'umol/L'
 	    var_list[4].units = 'degC'
 	    var_list[5].units = 'dbar'
-	elif mooring_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSP/SP001/09-CTDPFJ000/telemetered/ctdpf_j_cspp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temperature'
@@ -6241,7 +6241,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE01ISSP/SP001/09-CTDPFJ000/recovered_cspp/ctdpf_j_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temperature'
@@ -6261,7 +6261,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSP/SP001/09-CTDPFJ000/telemetered/ctdpf_j_cspp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temperature'
@@ -6281,7 +6281,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE06ISSP/SP001/09-CTDPFJ000/recovered_cspp/ctdpf_j_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temperature'
@@ -6301,7 +6301,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSP/SP001/10-PARADJ000/telemetered/parad_j_cspp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_j_par_counts_output'
@@ -6312,7 +6312,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE01ISSP/SP001/10-PARADJ000/recovered_cspp/parad_j_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_j_par_counts_output'
@@ -6323,7 +6323,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSP/SP001/10-PARADJ000/telemetered/parad_j_cspp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_j_par_counts_output'
@@ -6334,7 +6334,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE06ISSP/SP001/10-PARADJ000/recovered_cspp/parad_j_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_j_par_counts_output'
@@ -6345,7 +6345,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'NUTNR' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'NUTNR' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE01ISSP/SP001/06-NUTNRJ000/recovered_cspp/nutnr_j_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'salinity_corrected_nitrate'
@@ -6359,7 +6359,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'NUTNR' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'NUTNR' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE06ISSP/SP001/06-NUTNRJ000/recovered_cspp/nutnr_j_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'salinity_corrected_nitrate'
@@ -6373,7 +6373,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'SPKIR' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'SPKIR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSP/SP001/07-SPKIRJ000/telemetered/spkir_abj_cspp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -6384,7 +6384,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'SPKIR' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'SPKIR' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE01ISSP/SP001/07-SPKIRJ000/recovered_cspp/spkir_abj_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -6395,7 +6395,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'SPKIR' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'SPKIR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSP/SP001/07-SPKIRJ000/telemetered/spkir_abj_cspp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -6406,7 +6406,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'SPKIR' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'SPKIR' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE06ISSP/SP001/07-SPKIRJ000/recovered_cspp/spkir_abj_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -6417,7 +6417,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE01ISSP/SP001/05-VELPTJ000/telemetered/velpt_j_cspp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'velpt_j_eastward_velocity'
@@ -6446,7 +6446,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'degrees'
 	    var_list[7].units = 'degC'
 	    var_list[8].units = 'dbar'
-	elif mooring_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'VELPT' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'VELPT' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE01ISSP/SP001/05-VELPTJ000/recovered_cspp/velpt_j_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'velpt_j_eastward_velocity'
@@ -6475,7 +6475,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'degrees'
 	    var_list[7].units = 'degC'
 	    var_list[8].units = 'dbar'
-	elif mooring_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE06ISSP/SP001/05-VELPTJ000/telemetered/velpt_j_cspp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'velpt_j_eastward_velocity'
@@ -6504,7 +6504,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'degrees'
 	    var_list[7].units = 'degC'
 	    var_list[8].units = 'dbar'
-	elif mooring_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'VELPT' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'VELPT' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE06ISSP/SP001/05-VELPTJ000/recovered_cspp/velpt_j_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'velpt_j_eastward_velocity'
@@ -6533,7 +6533,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'degrees'
 	    var_list[7].units = 'degC'
 	    var_list[8].units = 'dbar'
-	elif mooring_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'OPTAA' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'OPTAA' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE01ISSP/SP001/04-OPTAAJ000/recovered_cspp/optaa_dj_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'int_ctd_pressure'
@@ -6541,7 +6541,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
-	elif mooring_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'OPTAA' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'OPTAA' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE06ISSP/SP001/04-OPTAAJ000/recovered_cspp/optaa_dj_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'int_ctd_pressure'
@@ -6549,7 +6549,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
-	elif mooring_name == 'CE02SHSP' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE02SHSP' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE02SHSP/SP001/07-FLORTJ000/recovered_cspp/flort_dj_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -6572,7 +6572,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CE07SHSP' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE07SHSP' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE07SHSP/SP001/07-FLORTJ000/recovered_cspp/flort_dj_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -6595,7 +6595,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CE02SHSP' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE02SHSP' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE02SHSP/SP001/01-DOSTAJ000/recovered_cspp/dosta_abcdjm_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -6615,7 +6615,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'umol/L'
 	    var_list[4].units = 'degC'
 	    var_list[5].units = 'dbar'
-	elif mooring_name == 'CE07SHSP' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE07SHSP' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE07SHSP/SP001/01-DOSTAJ000/recovered_cspp/dosta_abcdjm_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -6635,7 +6635,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'umol/L'
 	    var_list[4].units = 'degC'
 	    var_list[5].units = 'dbar'
-	elif mooring_name == 'CE02SHSP' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE02SHSP' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE02SHSP/SP001/08-CTDPFJ000/recovered_cspp/ctdpf_j_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temperature'
@@ -6655,7 +6655,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE07SHSP' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE07SHSP' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE07SHSP/SP001/08-CTDPFJ000/recovered_cspp/ctdpf_j_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temperature'
@@ -6675,7 +6675,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE02SHSP' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE02SHSP' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE02SHSP/SP001/09-PARADJ000/recovered_cspp/parad_j_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_j_par_counts_output'
@@ -6686,7 +6686,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CE07SHSP' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE07SHSP' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE07SHSP/SP001/09-PARADJ000/recovered_cspp/parad_j_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_j_par_counts_output'
@@ -6697,7 +6697,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CE02SHSP' and node == 'PROFILER' and instrument_class == 'NUTNR' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE02SHSP' and node == 'PROFILER' and instrument_class == 'NUTNR' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE02SHSP/SP001/05-NUTNRJ000/recovered_cspp/nutnr_j_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'salinity_corrected_nitrate'
@@ -6711,7 +6711,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CE07SHSP' and node == 'PROFILER' and instrument_class == 'NUTNR' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE07SHSP' and node == 'PROFILER' and instrument_class == 'NUTNR' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE07SHSP/SP001/05-NUTNRJ000/recovered_cspp/nutnr_j_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'salinity_corrected_nitrate'
@@ -6725,7 +6725,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CE02SHSP' and node == 'PROFILER' and instrument_class == 'SPKIR' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE02SHSP' and node == 'PROFILER' and instrument_class == 'SPKIR' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE02SHSP/SP001/06-SPKIRJ000/recovered_cspp/spkir_abj_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -6736,7 +6736,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CE07SHSP' and node == 'PROFILER' and instrument_class == 'SPKIR' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE07SHSP' and node == 'PROFILER' and instrument_class == 'SPKIR' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE07SHSP/SP001/06-SPKIRJ000/recovered_cspp/spkir_abj_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -6747,7 +6747,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CE02SHSP' and node == 'PROFILER' and instrument_class == 'VELPT' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE02SHSP' and node == 'PROFILER' and instrument_class == 'VELPT' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE02SHSP/SP001/02-VELPTJ000/recovered_cspp/velpt_j_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'velpt_j_eastward_velocity'
@@ -6776,7 +6776,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'degrees'
 	    var_list[7].units = 'degC'
 	    var_list[8].units = 'dbar'
-	elif mooring_name == 'CE07SHSP' and node == 'PROFILER' and instrument_class == 'VELPT' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE07SHSP' and node == 'PROFILER' and instrument_class == 'VELPT' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE07SHSP/SP001/02-VELPTJ000/recovered_cspp/velpt_j_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'velpt_j_eastward_velocity'
@@ -6805,7 +6805,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'degrees'
 	    var_list[7].units = 'degC'
 	    var_list[8].units = 'dbar'
-	elif mooring_name == 'CE02SHSP' and node == 'PROFILER' and instrument_class == 'OPTAA' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE02SHSP' and node == 'PROFILER' and instrument_class == 'OPTAA' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE02SHSP/SP001/04-OPTAAJ000/recovered_cspp/optaa_dj_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'int_ctd_pressure'
@@ -6813,7 +6813,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
-	elif mooring_name == 'CE07SHSP' and node == 'PROFILER' and instrument_class == 'OPTAA' and method == 'RecoveredCSPP':
+	elif platform_name == 'CE07SHSP' and node == 'PROFILER' and instrument_class == 'OPTAA' and method == 'RecoveredCSPP':
 	    uframe_dataset_name = 'CE07SHSP/SP001/04-OPTAAJ000/recovered_cspp/optaa_dj_cspp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'int_ctd_pressure'
@@ -6821,7 +6821,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
-	elif mooring_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL386/05-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -6847,7 +6847,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL386/05-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -6873,7 +6873,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL384/05-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -6899,7 +6899,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL384/05-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -6925,7 +6925,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL383/05-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -6951,7 +6951,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL383/05-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -6977,7 +6977,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL382/05-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7003,7 +7003,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL382/05-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7029,7 +7029,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL381/05-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7055,7 +7055,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL381/05-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7081,7 +7081,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL327/05-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7107,7 +7107,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL327/05-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7133,7 +7133,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL326/05-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7159,7 +7159,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL326/05-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7185,7 +7185,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL320/05-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7211,7 +7211,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL320/05-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7237,7 +7237,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL319/05-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7263,7 +7263,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL319/05-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7289,7 +7289,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL312/05-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7315,7 +7315,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL312/05-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7341,7 +7341,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL311/05-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7367,7 +7367,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL311/05-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7393,7 +7393,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL247/05-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7419,7 +7419,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL247/05-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -7445,7 +7445,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL386/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7465,7 +7465,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL386/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7485,7 +7485,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL384/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7505,7 +7505,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL384/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7525,7 +7525,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL383/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7545,7 +7545,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL383/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7565,7 +7565,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL382/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7585,7 +7585,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL382/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7605,7 +7605,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL381/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7625,7 +7625,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL381/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7645,7 +7645,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL327/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7665,7 +7665,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL327/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7685,7 +7685,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL326/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7705,7 +7705,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL326/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7725,7 +7725,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL320/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7745,7 +7745,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL320/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7765,7 +7765,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL319/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7785,7 +7785,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL319/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7805,7 +7805,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL312/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7825,7 +7825,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL312/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7845,7 +7845,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL311/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7865,7 +7865,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL311/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7885,7 +7885,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL247/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7905,7 +7905,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL247/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -7925,7 +7925,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL386/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -7954,7 +7954,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL386/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -7983,7 +7983,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL384/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8012,7 +8012,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL384/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8041,7 +8041,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL383/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8070,7 +8070,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL383/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8099,7 +8099,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL382/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8128,7 +8128,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL382/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8157,7 +8157,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL381/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8186,7 +8186,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL381/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8215,7 +8215,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL327/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8244,7 +8244,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL327/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8273,7 +8273,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL326/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8302,7 +8302,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL326/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8331,7 +8331,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL320/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8360,7 +8360,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL320/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8389,7 +8389,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL319/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8418,7 +8418,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL319/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8447,7 +8447,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL312/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8476,7 +8476,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL312/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8505,7 +8505,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL311/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8534,7 +8534,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL311/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8563,7 +8563,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL247/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8592,7 +8592,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL247/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -8621,7 +8621,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL386/01-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8638,7 +8638,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL386/01-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8655,7 +8655,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL384/01-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8672,7 +8672,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL384/01-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8689,7 +8689,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL383/01-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8706,7 +8706,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL383/01-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8723,7 +8723,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL382/01-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8740,7 +8740,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL382/01-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8757,7 +8757,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL381/01-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8774,7 +8774,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL381/01-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8791,7 +8791,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL327/01-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8808,7 +8808,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL327/01-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8825,7 +8825,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL326/01-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8842,7 +8842,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL326/01-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8859,7 +8859,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL320/01-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8876,7 +8876,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL320/01-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8893,7 +8893,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL319/01-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8910,7 +8910,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL319/01-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8927,7 +8927,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL312/01-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8944,7 +8944,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL312/01-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8961,7 +8961,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL311/01-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8978,7 +8978,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL311/01-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -8995,7 +8995,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE05MOAS/GL247/01-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -9012,7 +9012,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL247/01-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -9029,7 +9029,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL386' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL386/03-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -9064,7 +9064,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL384' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL384/03-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -9099,7 +9099,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL383' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL383/03-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -9134,7 +9134,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL382' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL382/03-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -9169,7 +9169,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL381' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL381/03-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -9204,7 +9204,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL327' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL327/03-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -9239,7 +9239,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL326' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL326/03-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -9274,7 +9274,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL320' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL320/03-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -9309,7 +9309,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL319' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL319/03-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -9344,7 +9344,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL312' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL312/03-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -9379,7 +9379,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL311' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL311/03-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -9414,7 +9414,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CEGL247' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE05MOAS/GL247/03-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -9449,7 +9449,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/SBD11/06-METBKA000/telemetered/metbk_hourly'
 	    var_list[0].name = 'met_timeflx'
 	    var_list[1].name = 'met_rainrte'
@@ -9502,7 +9502,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[14].units = 'degC'
 	    var_list[15].units = 'm/s'
 	    var_list[16].units = 'W/m2'
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/SBD11/06-METBKA000/recovered_host/metbk_hourly'
 	    var_list[0].name = 'met_timeflx'
 	    var_list[1].name = 'met_rainrte'
@@ -9555,7 +9555,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[14].units = 'degC'
 	    var_list[15].units = 'm/s'
 	    var_list[16].units = 'W/m2'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/SBD11/06-METBKA000/telemetered/metbk_hourly'
 	    var_list[0].name = 'met_timeflx'
 	    var_list[1].name = 'met_rainrte'
@@ -9608,7 +9608,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[14].units = 'degC'
 	    var_list[15].units = 'm/s'
 	    var_list[16].units = 'W/m2'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/SBD11/06-METBKA000/recovered_host/metbk_hourly'
 	    var_list[0].name = 'met_timeflx'
 	    var_list[1].name = 'met_rainrte'
@@ -9661,7 +9661,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[14].units = 'degC'
 	    var_list[15].units = 'm/s'
 	    var_list[16].units = 'W/m2'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/SBD11/06-METBKA000/telemetered/metbk_hourly'
 	    var_list[0].name = 'met_timeflx'
 	    var_list[1].name = 'met_rainrte'
@@ -9714,7 +9714,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[14].units = 'degC'
 	    var_list[15].units = 'm/s'
 	    var_list[16].units = 'W/m2'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/SBD11/06-METBKA000/recovered_host/metbk_hourly'
 	    var_list[0].name = 'met_timeflx'
 	    var_list[1].name = 'met_rainrte'
@@ -9767,7 +9767,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[14].units = 'degC'
 	    var_list[15].units = 'm/s'
 	    var_list[16].units = 'W/m2'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/SBD11/06-METBKA000/telemetered/metbk_hourly'
 	    var_list[0].name = 'met_timeflx'
 	    var_list[1].name = 'met_rainrte'
@@ -9820,7 +9820,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[14].units = 'degC'
 	    var_list[15].units = 'm/s'
 	    var_list[16].units = 'W/m2'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/SBD11/06-METBKA000/recovered_host/metbk_hourly'
 	    var_list[0].name = 'met_timeflx'
 	    var_list[1].name = 'met_rainrte'
@@ -9873,7 +9873,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[14].units = 'degC'
 	    var_list[15].units = 'm/s'
 	    var_list[16].units = 'W/m2'
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_mean_directional'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'mean_direction'
@@ -9911,7 +9911,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[9].units = 'Hz'
 	    var_list[10].units = 'deg'
 	    var_list[11].units = 'deg'
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_mean_directional_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'mean_direction'
@@ -9949,7 +9949,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[9].units = 'Hz'
 	    var_list[10].units = 'deg'
 	    var_list[11].units = 'deg'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_mean_directional'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'mean_direction'
@@ -9987,7 +9987,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[9].units = 'Hz'
 	    var_list[10].units = 'deg'
 	    var_list[11].units = 'deg'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_mean_directional_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'mean_direction'
@@ -10025,7 +10025,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[9].units = 'Hz'
 	    var_list[10].units = 'deg'
 	    var_list[11].units = 'deg'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_mean_directional'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'mean_direction'
@@ -10063,7 +10063,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[9].units = 'Hz'
 	    var_list[10].units = 'deg'
 	    var_list[11].units = 'deg'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_mean_directional_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'mean_direction'
@@ -10101,7 +10101,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[9].units = 'Hz'
 	    var_list[10].units = 'deg'
 	    var_list[11].units = 'deg'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_mean_directional'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'mean_direction'
@@ -10139,7 +10139,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[9].units = 'Hz'
 	    var_list[10].units = 'deg'
 	    var_list[11].units = 'deg'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_mean_directional_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'mean_direction'
@@ -10177,7 +10177,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[9].units = 'Hz'
 	    var_list[10].units = 'deg'
 	    var_list[11].units = 'deg'
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_non_directional'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -10197,7 +10197,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'Hz'
 	    var_list[4].units = 'm2 Hz-1'
 	    var_list[5].units = 'Hz'
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_non_directional_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -10217,7 +10217,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'Hz'
 	    var_list[4].units = 'm2 Hz-1'
 	    var_list[5].units = 'Hz'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_non_directional'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -10237,7 +10237,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'Hz'
 	    var_list[4].units = 'm2 Hz-1'
 	    var_list[5].units = 'Hz'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_non_directional_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -10257,7 +10257,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'Hz'
 	    var_list[4].units = 'm2 Hz-1'
 	    var_list[5].units = 'Hz'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_non_directional'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -10277,7 +10277,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'Hz'
 	    var_list[4].units = 'm2 Hz-1'
 	    var_list[5].units = 'Hz'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_non_directional_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -10297,7 +10297,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'Hz'
 	    var_list[4].units = 'm2 Hz-1'
 	    var_list[5].units = 'Hz'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_non_directional'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -10317,7 +10317,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'Hz'
 	    var_list[4].units = 'm2 Hz-1'
 	    var_list[5].units = 'Hz'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_non_directional_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -10337,7 +10337,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'Hz'
 	    var_list[4].units = 'm2 Hz-1'
 	    var_list[5].units = 'Hz'
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_motion'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_time_samples'
@@ -10372,7 +10372,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'seconds since 1900-01-01'
 	    var_list[9].units = 'm'
 	    var_list[10].units = 'm'
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_motion_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_time_samples'
@@ -10407,7 +10407,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'seconds since 1900-01-01'
 	    var_list[9].units = 'm'
 	    var_list[10].units = 'm'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_motion'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_time_samples'
@@ -10442,7 +10442,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'seconds since 1900-01-01'
 	    var_list[9].units = 'm'
 	    var_list[10].units = 'm'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_motion_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_time_samples'
@@ -10477,7 +10477,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'seconds since 1900-01-01'
 	    var_list[9].units = 'm'
 	    var_list[10].units = 'm'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_motion'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_time_samples'
@@ -10512,7 +10512,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'seconds since 1900-01-01'
 	    var_list[9].units = 'm'
 	    var_list[10].units = 'm'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_motion_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_time_samples'
@@ -10547,7 +10547,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'seconds since 1900-01-01'
 	    var_list[9].units = 'm'
 	    var_list[10].units = 'm'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_motion'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_time_samples'
@@ -10582,7 +10582,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'seconds since 1900-01-01'
 	    var_list[9].units = 'm'
 	    var_list[10].units = 'm'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_motion_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_time_samples'
@@ -10617,7 +10617,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'seconds since 1900-01-01'
 	    var_list[9].units = 'm'
 	    var_list[10].units = 'm'
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'Telemetered':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE02SHSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_fourier'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -10643,7 +10643,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'Hz'
 	    var_list[6].units = 'Hz'
 	    var_list[7].units = '1'
-	elif mooring_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'RecoveredHost':
+	elif platform_name == 'CE02SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE02SHSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_fourier_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -10669,7 +10669,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'Hz'
 	    var_list[6].units = 'Hz'
 	    var_list[7].units = '1'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'Telemetered':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE04OSSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_fourier'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -10695,7 +10695,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'Hz'
 	    var_list[6].units = 'Hz'
 	    var_list[7].units = '1'
-	elif mooring_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'RecoveredHost':
+	elif platform_name == 'CE04OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE04OSSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_fourier_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -10721,7 +10721,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'Hz'
 	    var_list[6].units = 'Hz'
 	    var_list[7].units = '1'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'Telemetered':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE09OSSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_fourier'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -10747,7 +10747,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'Hz'
 	    var_list[6].units = 'Hz'
 	    var_list[7].units = '1'
-	elif mooring_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'RecoveredHost':
+	elif platform_name == 'CE09OSSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE09OSSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_fourier_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -10773,7 +10773,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'Hz'
 	    var_list[6].units = 'Hz'
 	    var_list[7].units = '1'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'Telemetered':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'Telemetered':
 	    uframe_dataset_name = 'CE07SHSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_fourier'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -10799,7 +10799,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'Hz'
 	    var_list[6].units = 'Hz'
 	    var_list[7].units = '1'
-	elif mooring_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'RecoveredHost':
+	elif platform_name == 'CE07SHSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CE07SHSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_fourier_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -10825,7 +10825,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'Hz'
 	    var_list[6].units = 'Hz'
 	    var_list[7].units = '1'
-	elif mooring_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Streamed':
+	elif platform_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSPS/SF01B/2A-CTDPFA107/streamed/ctdpf_sbe43_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_temperature'
@@ -10845,7 +10845,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE04OSPD' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CE04OSPD' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE04OSPD/DP01B/01-CTDPFL105/recovered_inst/dpc_ctd_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -10865,7 +10865,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE04OSPD' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
+	elif platform_name == 'CE04OSPD' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CE04OSPD/DP01B/01-CTDPFL105/recovered_wfp/dpc_ctd_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -10885,7 +10885,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Streamed':
+	elif platform_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSPS/SF01B/2A-CTDPFA107/streamed/ctdpf_sbe43_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'corrected_dissolved_oxygen'
@@ -10896,7 +10896,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CE04OSPD' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredInst':
+	elif platform_name == 'CE04OSPD' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE04OSPD/DP01B/06-DOSTAD105/recovered_inst/dpc_optode_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -10910,7 +10910,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CE04OSPD' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
+	elif platform_name == 'CE04OSPD' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CE04OSPD/DP01B/06-DOSTAD105/recovered_wfp/dpc_optode_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -10924,7 +10924,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Streamed':
+	elif platform_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSPS/SF01B/3A-FLORTD104/streamed/flort_d_data_record'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -10947,7 +10947,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CE04OSPD' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredInst':
+	elif platform_name == 'CE04OSPD' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE04OSPD/DP01B/04-FLNTUA103/recovered_inst/dpc_flnturtd_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'flntu_x_mmp_cds_fluorometric_chlorophyll_a'
@@ -10967,7 +10967,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'm-1'
 	    var_list[4].units = 'ppb'
 	    var_list[5].units = 'dbar'
-	elif mooring_name == 'CE04OSPD' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
+	elif platform_name == 'CE04OSPD' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CE04OSPD/DP01B/03-FLCDRA103/recovered_wfp/dpc_flcdrtd_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'flntu_x_mmp_cds_fluorometric_chlorophyll_a'
@@ -10987,7 +10987,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'm-1'
 	    var_list[4].units = 'ppb'
 	    var_list[5].units = 'dbar'
-	elif mooring_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'PHSEN' and method == 'Streamed':
+	elif platform_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'PHSEN' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSPS/SF01B/2B-PHSENA108/streamed/phsen_data_record'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -11001,7 +11001,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Streamed':
+	elif platform_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSPS/SF01B/3C-PARADA102/streamed/parad_sa_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'par_counts_output'
@@ -11012,7 +11012,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'SPKIR' and method == 'Streamed':
+	elif platform_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'SPKIR' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSPS/SF01B/3D-SPKIRA102/streamed/spkir_data_record'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_downwelling_vector'
@@ -11023,7 +11023,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'NUTNR' and method == 'Streamed':
+	elif platform_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'NUTNR' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSPS/SF01B/4A-NUTNRA102/streamed/nutnr_a_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -11037,7 +11037,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'PCO2W' and method == 'Streamed':
+	elif platform_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'PCO2W' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSPS/SF01B/4F-PCO2WA102/streamed/pco2w_a_sami_data_record'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -11051,7 +11051,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'VELPT' and method == 'Streamed':
+	elif platform_name == 'CE04OSPS' and node == 'PROFILER' and instrument_class == 'VELPT' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSPS/SF01B/4B-VELPTD106/streamed/velpt_velocity_data'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'velpt_d_eastward_velocity'
@@ -11083,7 +11083,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
 	    var_list[9].units = 'dbar'
-	elif mooring_name == 'CE04OSPD' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredInst':
+	elif platform_name == 'CE04OSPD' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CE04OSPD/DP01B/02-VEL3DA105/recovered_inst/dpc_acm_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_a_eastward_velocity'
@@ -11103,7 +11103,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'm/s'
 	    var_list[4].units = 'm/s'
 	    var_list[5].units = 'dbar'
-	elif mooring_name == 'CE04OSPD' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
+	elif platform_name == 'CE04OSPD' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CE04OSPD/DP01B/02-VEL3DA105/recovered_wfp/dpc_acm_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_a_eastward_velocity'
@@ -11123,7 +11123,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'm/s'
 	    var_list[4].units = 'm/s'
 	    var_list[5].units = 'dbar'
-	elif mooring_name == 'CE04OSPS' and node == 'PLATFORM200M' and instrument_class == 'CTD' and method == 'Streamed':
+	elif platform_name == 'CE04OSPS' and node == 'PLATFORM200M' and instrument_class == 'CTD' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSPS/PC01B/4A-CTDPFA109/streamed/ctdpf_optode_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_temperature'
@@ -11143,7 +11143,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CE04OSPS' and node == 'PLATFORM200M' and instrument_class == 'DOSTA' and method == 'Streamed':
+	elif platform_name == 'CE04OSPS' and node == 'PLATFORM200M' and instrument_class == 'DOSTA' and method == 'Streamed':
     #uframe_dataset_name = 'CE04OSPS/PC01B/4A-DOSTAD109/streamed/ctdpf_optode_sample'
 	    uframe_dataset_name = 'CE04OSPS/PC01B/4A-CTDPFA109/streamed/ctdpf_optode_sample'
 	    var_list[0].name = 'time'
@@ -11155,7 +11155,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CE04OSPS' and node == 'PLATFORM200M' and instrument_class == 'PHSEN' and method == 'Streamed':
+	elif platform_name == 'CE04OSPS' and node == 'PLATFORM200M' and instrument_class == 'PHSEN' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSPS/PC01B/4B-PHSENA106/streamed/phsen_data_record'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -11166,7 +11166,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CE04OSPS' and node == 'PLATFORM200M' and instrument_class == 'PCO2W' and method == 'Streamed':
+	elif platform_name == 'CE04OSPS' and node == 'PLATFORM200M' and instrument_class == 'PCO2W' and method == 'Streamed':
 	    uframe_dataset_name = 'CE04OSPS/PC01B/4D-PCO2WA105/streamed/pco2w_a_sami_data_record'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -11178,7 +11178,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
 #Coastal Pioneer CSM Data Streams
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/SBD11/06-METBKA000/telemetered/metbk_a_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sea_surface_temperature'
@@ -11237,7 +11237,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[16].units = 'm/s'
 	    var_list[17].units = 'm/s'
 	    var_list[18].units = 'g/kg'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'METBK2' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'METBK2' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/06-METBKA000/telemetered/metbk_a_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sea_surface_temperature'
@@ -11296,7 +11296,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[16].units = 'm/s'
 	    var_list[17].units = 'm/s'
 	    var_list[18].units = 'g/kg'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/SBD11/06-METBKA000/recovered_host/metbk_a_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sea_surface_temperature'
@@ -11355,7 +11355,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[16].units = 'm/s'
 	    var_list[17].units = 'm/s'
 	    var_list[18].units = 'g/kg'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'METBK2' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'METBK2' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/06-METBKA000/recovered_host/metbk_a_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sea_surface_temperature'
@@ -11414,7 +11414,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[16].units = 'm/s'
 	    var_list[17].units = 'm/s'
 	    var_list[18].units = 'g/kg'
-	elif mooring_name == 'CP03ISSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/SBD11/06-METBKA000/telemetered/metbk_a_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sea_surface_temperature'
@@ -11473,7 +11473,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[16].units = 'm/s'
 	    var_list[17].units = 'm/s'
 	    var_list[18].units = 'g/kg'
-	elif mooring_name == 'CP03ISSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/SBD11/06-METBKA000/recovered_host/metbk_a_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sea_surface_temperature'
@@ -11532,7 +11532,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[16].units = 'm/s'
 	    var_list[17].units = 'm/s'
 	    var_list[18].units = 'g/kg'
-	elif mooring_name == 'CP04OSSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/SBD11/06-METBKA000/telemetered/metbk_a_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sea_surface_temperature'
@@ -11591,7 +11591,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[16].units = 'm/s'
 	    var_list[17].units = 'm/s'
 	    var_list[18].units = 'g/kg'
-	elif mooring_name == 'CP04OSSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'BUOY' and instrument_class == 'METBK1' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/SBD11/06-METBKA000/recovered_host/metbk_a_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sea_surface_temperature'
@@ -11651,7 +11651,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[17].units = 'm/s'
 	    var_list[18].units = 'g/kg'
 #WAVSS
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_statistics'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_zero_crossings'
@@ -11698,7 +11698,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[12].units = 'm'
 	    var_list[13].units = 'degrees'
 	    var_list[14].units = 'degrees'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_Stats' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_statistics_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_zero_crossings'
@@ -11745,7 +11745,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[12].units = 'm'
 	    var_list[13].units = 'degrees'
 	    var_list[14].units = 'degrees'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_mean_directional'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'mean_direction'
@@ -11783,7 +11783,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[9].units = 'Hz'
 	    var_list[10].units = 'deg'
 	    var_list[11].units = 'deg'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_MeanDir' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_mean_directional_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'mean_direction'
@@ -11821,7 +11821,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[9].units = 'Hz'
 	    var_list[10].units = 'deg'
 	    var_list[11].units = 'deg'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_non_directional'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -11841,7 +11841,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'Hz'
 	    var_list[4].units = 'm2 Hz-1'
 	    var_list[5].units = 'Hz'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_NonDir' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_non_directional_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -11861,7 +11861,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'Hz'
 	    var_list[4].units = 'm2 Hz-1'
 	    var_list[5].units = 'Hz'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_motion'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_time_samples'
@@ -11896,7 +11896,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'seconds since 1900-01-01'
 	    var_list[9].units = 'm'
 	    var_list[10].units = 'm'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_Motion' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_motion_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_time_samples'
@@ -11931,7 +11931,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'seconds since 1900-01-01'
 	    var_list[9].units = 'm'
 	    var_list[10].units = 'm'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/05-WAVSSA000/telemetered/wavss_a_dcl_fourier'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -11957,7 +11957,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'Hz'
 	    var_list[6].units = 'Hz'
 	    var_list[7].units = '1'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'WAVSS_Fourier' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/05-WAVSSA000/recovered_host/wavss_a_dcl_fourier_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'number_bands'
@@ -11984,7 +11984,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'Hz'
 	    var_list[7].units = '1'
     #PCO2A
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/04-PCO2AA000/telemetered/pco2a_a_dcl_instrument_water'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'partial_pressure_co2_ssw'
@@ -11998,7 +11998,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'uatm'
 	    var_list[2].units = 'uatm'
 	    var_list[3].units = 'mol m-2 s-1'
-	elif mooring_name == 'CP03ISSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/SBD12/04-PCO2AA000/telemetered/pco2a_a_dcl_instrument_water'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'partial_pressure_co2_ssw'
@@ -12012,7 +12012,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'uatm'
 	    var_list[2].units = 'uatm'
 	    var_list[3].units = 'mol m-2 s-1'
-	elif mooring_name == 'CP04OSSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/SBD12/04-PCO2AA000/telemetered/pco2a_a_dcl_instrument_water'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'partial_pressure_co2_ssw'
@@ -12027,7 +12027,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'uatm'
 	    var_list[3].units = 'mol m-2 s-1'
     #PCO2A
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/04-PCO2AA000/recovered_host/pco2a_a_dcl_instrument_water_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'partial_pressure_co2_ssw'
@@ -12041,7 +12041,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'uatm'
 	    var_list[2].units = 'uatm'
 	    var_list[3].units = 'mol m-2 s-1'
-	elif mooring_name == 'CP03ISSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/SBD12/04-PCO2AA000/recovered_host/pco2a_a_dcl_instrument_water_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'partial_pressure_co2_ssw'
@@ -12055,7 +12055,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'uatm'
 	    var_list[2].units = 'uatm'
 	    var_list[3].units = 'mol m-2 s-1'
-	elif mooring_name == 'CP04OSSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'BUOY' and instrument_class == 'PCO2A' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/SBD12/04-PCO2AA000/recovered_host/pco2a_a_dcl_instrument_water_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'partial_pressure_co2_ssw'
@@ -12070,22 +12070,22 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'uatm'
 	    var_list[3].units = 'mol m-2 s-1'
     #FDCHP
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'FDCHP' and method == 'RecoveredInst':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'FDCHP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/08-FDCHPA000/recovered_inst/fdchp_a_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'FDCHP' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'FDCHP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/08-FDCHPA000/telemetered/fdchp_a_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'FDCHP' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'FDCHP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/08-FDCHPA000/recovered_host/fdchp_a_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/SBD11/06-METBKA000/telemetered/metbk_hourly'
 	    var_list[0].name = 'met_timeflx'
 	    var_list[1].name = 'met_rainrte'
@@ -12138,7 +12138,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[14].units = 'degC'
 	    var_list[15].units = 'm/s'
 	    var_list[16].units = 'W/m2'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/SBD11/06-METBKA000/recovered_host/metbk_hourly'
 	    var_list[0].name = 'met_timeflx'
 	    var_list[1].name = 'met_rainrte'
@@ -12191,7 +12191,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[14].units = 'degC'
 	    var_list[15].units = 'm/s'
 	    var_list[16].units = 'W/m2'
-	elif mooring_name == 'CP03ISSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/SBD11/06-METBKA000/telemetered/metbk_hourly'
 	    var_list[0].name = 'met_timeflx'
 	    var_list[1].name = 'met_rainrte'
@@ -12244,7 +12244,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[14].units = 'degC'
 	    var_list[15].units = 'm/s'
 	    var_list[16].units = 'W/m2'
-	elif mooring_name == 'CP03ISSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/SBD11/06-METBKA000/recovered_host/metbk_hourly'
 	    var_list[0].name = 'met_timeflx'
 	    var_list[1].name = 'met_rainrte'
@@ -12297,7 +12297,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[14].units = 'degC'
 	    var_list[15].units = 'm/s'
 	    var_list[16].units = 'W/m2'
-	elif mooring_name == 'CP04OSSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/SBD11/06-METBKA000/telemetered/metbk_hourly'
 	    var_list[0].name = 'met_timeflx'
 	    var_list[1].name = 'met_rainrte'
@@ -12350,7 +12350,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[14].units = 'degC'
 	    var_list[15].units = 'm/s'
 	    var_list[16].units = 'W/m2'
-	elif mooring_name == 'CP04OSSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'BUOY' and instrument_class == 'METBK1-hr' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/SBD11/06-METBKA000/recovered_host/metbk_hourly'
 	    var_list[0].name = 'met_timeflx'
 	    var_list[1].name = 'met_rainrte'
@@ -12403,7 +12403,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[14].units = 'degC'
 	    var_list[15].units = 'm/s'
 	    var_list[16].units = 'W/m2'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'METBK2-hr' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'METBK2-hr' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/06-METBKA000/telemetered/metbk_hourly'
 	    var_list[0].name = 'met_timeflx'
 	    var_list[1].name = 'met_rainrte'
@@ -12456,7 +12456,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[14].units = 'degC'
 	    var_list[15].units = 'm/s'
 	    var_list[16].units = 'W/m2'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'METBK2-hr' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'METBK2-hr' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/SBD12/06-METBKA000/recovered_host/metbk_hourly'
 	    var_list[0].name = 'met_timeflx'
 	    var_list[1].name = 'met_rainrte'
@@ -12509,7 +12509,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[14].units = 'degC'
 	    var_list[15].units = 'm/s'
 	    var_list[16].units = 'W/m2'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/RID27/03-CTDBPC000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -12529,7 +12529,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/RID27/03-CTDBPC000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -12549,7 +12549,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP01CNSM/RID27/03-CTDBPC000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -12569,7 +12569,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/RID27/03-CTDBPC000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -12589,7 +12589,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/RID27/03-CTDBPC000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -12609,7 +12609,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP03ISSM/RID27/03-CTDBPC000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -12629,7 +12629,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/RID27/03-CTDBPC000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -12649,7 +12649,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/RID27/03-CTDBPC000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -12669,7 +12669,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP04OSSM/RID27/03-CTDBPC000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -12689,7 +12689,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/MFD37/03-CTDBPE000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -12709,7 +12709,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/MFD37/03-CTDBPE000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -12729,7 +12729,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP04OSSM/MFD37/03-CTDBPE000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -12749,7 +12749,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/MFD37/03-CTDBPD000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -12769,7 +12769,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/MFD37/03-CTDBPD000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -12789,7 +12789,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP03ISSM/MFD37/03-CTDBPD000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -12809,7 +12809,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/MFD37/03-CTDBPD000/telemetered/ctdbp_cdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -12829,7 +12829,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/MFD37/03-CTDBPD000/recovered_host/ctdbp_cdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'temp'
@@ -12849,7 +12849,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredInst':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'CTD' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP01CNSM/MFD37/03-CTDBPD000/recovered_inst/ctdbp_cdef_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdbp_seawater_temperature'
@@ -12869,67 +12869,67 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/RID27/01-OPTAAD000/telemetered/optaa_dj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/MFD37/01-OPTAAD000/telemetered/optaa_dj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/RID27/01-OPTAAD000/recovered_host/optaa_dj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/MFD37/01-OPTAAD000/recovered_host/optaa_dj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/RID27/01-OPTAAD000/telemetered/optaa_dj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/MFD37/01-OPTAAD000/telemetered/optaa_dj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/RID27/01-OPTAAD000/recovered_host/optaa_dj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/MFD37/01-OPTAAD000/recovered_host/optaa_dj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/RID27/01-OPTAAD000/telemetered/optaa_dj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/MFD37/01-OPTAAD000/telemetered/optaa_dj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/RID27/01-OPTAAD000/recovered_host/optaa_dj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'OPTAA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/MFD37/01-OPTAAD000/recovered_host/optaa_dj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP01CNSM/RID26/04-VELPTA000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -12958,7 +12958,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP03ISSM/RID26/04-VELPTA000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -12987,7 +12987,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP04OSSM/RID26/04-VELPTA000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -13016,7 +13016,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/RID26/04-VELPTA000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -13045,7 +13045,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/RID26/04-VELPTA000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -13074,7 +13074,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/RID26/04-VELPTA000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -13103,7 +13103,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/RID26/04-VELPTA000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -13132,7 +13132,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/RID26/04-VELPTA000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -13161,7 +13161,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'VELPT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/RID26/04-VELPTA000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -13190,7 +13190,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/RID27/02-FLORTD000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -13210,7 +13210,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/RID27/02-FLORTD000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -13230,7 +13230,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/RID27/02-FLORTD000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -13250,7 +13250,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/RID27/02-FLORTD000/recovered_host/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -13270,7 +13270,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/RID27/02-FLORTD000/recovered_host/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -13290,7 +13290,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/RID27/02-FLORTD000/recovered_host/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -13310,7 +13310,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'ppb'
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/RID26/08-SPKIRB000/recovered_host/spkir_abj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -13318,7 +13318,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/RID26/08-SPKIRB000/recovered_host/spkir_abj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -13326,7 +13326,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/RID26/08-SPKIRB000/recovered_host/spkir_abj_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -13334,7 +13334,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/RID26/08-SPKIRB000/telemetered/spkir_abj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -13342,7 +13342,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/RID26/08-SPKIRB000/telemetered/spkir_abj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -13350,7 +13350,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'SPKIR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/RID26/08-SPKIRB000/telemetered/spkir_abj_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'spkir_abj_cspp_downwelling_vector'
@@ -13358,7 +13358,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'uW cm-2 nm-1'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/RID27/04-DOSTAD000/recovered_host/dosta_abcdjm_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -13375,7 +13375,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/RID27/04-DOSTAD000/recovered_host/dosta_abcdjm_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -13392,7 +13392,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/RID27/04-DOSTAD000/recovered_host/dosta_abcdjm_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -13409,7 +13409,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/RID27/04-DOSTAD000/telemetered/dosta_abcdjm_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -13426,7 +13426,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/RID27/04-DOSTAD000/telemetered/dosta_abcdjm_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -13443,7 +13443,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/RID27/04-DOSTAD000/telemetered/dosta_abcdjm_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -13460,7 +13460,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/RID26/06-PHSEND000/telemetered/phsen_abcdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13471,7 +13471,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/RID26/06-PHSEND000/recovered_host/phsen_abcdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13482,7 +13482,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP01CNSM/RID26/06-PHSEND000/recovered_inst/phsen_abcdef_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13493,7 +13493,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/RID26/06-PHSEND000/telemetered/phsen_abcdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13504,7 +13504,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/RID26/06-PHSEND000/recovered_host/phsen_abcdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13515,7 +13515,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP03ISSM/RID26/06-PHSEND000/recovered_inst/phsen_abcdef_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13526,7 +13526,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/RID26/06-PHSEND000/telemetered/phsen_abcdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13537,7 +13537,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/RID26/06-PHSEND000/recovered_host/phsen_abcdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13548,7 +13548,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP04OSSM/RID26/06-PHSEND000/recovered_inst/phsen_abcdef_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13559,7 +13559,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/MFD35/06-PHSEND000/telemetered/phsen_abcdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13570,7 +13570,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/MFD35/06-PHSEND000/telemetered/phsen_abcdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13581,7 +13581,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/MFD35/06-PHSEND000/telemetered/phsen_abcdef_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13592,7 +13592,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/MFD35/06-PHSEND000/recovered_host/phsen_abcdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13603,7 +13603,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/MFD35/06-PHSEND000/recovered_host/phsen_abcdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13614,7 +13614,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/MFD35/06-PHSEND000/recovered_host/phsen_abcdef_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13625,7 +13625,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP01CNSM/MFD35/06-PHSEND000/recovered_inst/phsen_abcdef_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13636,7 +13636,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP03ISSM/MFD35/06-PHSEND000/recovered_inst/phsen_abcdef_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13647,7 +13647,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PHSEN' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP04OSSM/MFD35/06-PHSEND000/recovered_inst/phsen_abcdef_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'phsen_thermistor_temperature'
@@ -13658,7 +13658,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'unitless'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP01CNSM/MFD35/05-PCO2WB000/recovered_inst/pco2w_abc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -13669,7 +13669,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/MFD35/05-PCO2WB000/telemetered/pco2w_abc_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -13680,7 +13680,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/MFD35/05-PCO2WB000/recovered_host/pco2w_abc_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -13691,7 +13691,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP03ISSM/MFD35/05-PCO2WB000/recovered_inst/pco2w_abc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -13702,7 +13702,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/MFD35/05-PCO2WB000/telemetered/pco2w_abc_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -13713,7 +13713,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/MFD35/05-PCO2WB000/recovered_host/pco2w_abc_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -13724,7 +13724,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP04OSSM/MFD35/05-PCO2WB000/recovered_inst/pco2w_abc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -13735,7 +13735,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/MFD35/05-PCO2WB000/telemetered/pco2w_abc_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -13746,7 +13746,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PCO2W' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/MFD35/05-PCO2WB000/recovered_host/pco2w_abc_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'pco2w_thermistor_temperature'
@@ -13757,7 +13757,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/MFD35/02-PRESFB000/recovered_host/presf_abc_dcl_tide_measurement_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'abs_seafloor_pressure'
@@ -13768,7 +13768,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredInst':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP01CNSM/MFD35/02-PRESFB000/recovered_inst/presf_abc_tide_measurement_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'presf_tide_pressure'
@@ -13779,7 +13779,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/MFD35/02-PRESFB000/telemetered/presf_abc_dcl_tide_measurement'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'abs_seafloor_pressure'
@@ -13790,7 +13790,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/MFD35/02-PRESFB000/recovered_host/presf_abc_dcl_tide_measurement_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'abs_seafloor_pressure'
@@ -13801,7 +13801,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredInst':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP03ISSM/MFD35/02-PRESFB000/recovered_inst/presf_abc_tide_measurement_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'presf_tide_pressure'
@@ -13812,7 +13812,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/MFD35/02-PRESFB000/telemetered/presf_abc_dcl_tide_measurement'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'abs_seafloor_pressure'
@@ -13823,7 +13823,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/MFD35/02-PRESFC000/recovered_host/presf_abc_dcl_tide_measurement_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'abs_seafloor_pressure'
@@ -13834,7 +13834,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredInst':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP04OSSM/MFD35/02-PRESFC000/recovered_inst/presf_abc_tide_measurement_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'presf_tide_pressure'
@@ -13845,7 +13845,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'PRESF' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/MFD35/02-PRESFC000/telemetered/presf_abc_dcl_tide_measurement'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'abs_seafloor_pressure'
@@ -13856,7 +13856,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	    var_list[2].units = 'degC'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP01CNSM/MFD35/04-VELPTA000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -13885,7 +13885,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/MFD35/04-VELPTA000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -13914,7 +13914,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/MFD35/04-VELPTA000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -13943,7 +13943,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP03ISSM/MFD35/04-VELPTA000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -13972,7 +13972,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/MFD35/04-VELPTA000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -14001,7 +14001,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/MFD35/04-VELPTA000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -14030,7 +14030,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'RecoveredInst':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP04OSSM/MFD35/04-VELPTB000/recovered_inst/velpt_ab_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -14059,7 +14059,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/MFD35/04-VELPTB000/telemetered/velpt_ab_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -14088,7 +14088,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'VELPT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/MFD35/04-VELPTB000/recovered_host/velpt_ab_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'eastward_velocity'
@@ -14117,7 +14117,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'deci-degrees'
 	    var_list[7].units = '0.01degC'
 	    var_list[8].units = '0.001dbar'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/MFD37/04-DOSTAD000/telemetered/dosta_abcdjm_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -14134,7 +14134,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/MFD37/04-DOSTAD000/recovered_host/dosta_abcdjm_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -14151,7 +14151,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/MFD37/04-DOSTAD000/telemetered/dosta_abcdjm_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -14168,7 +14168,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/MFD37/04-DOSTAD000/recovered_host/dosta_abcdjm_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -14185,7 +14185,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/MFD37/04-DOSTAD000/telemetered/dosta_abcdjm_dcl_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -14202,7 +14202,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/MFD37/04-DOSTAD000/recovered_host/dosta_abcdjm_dcl_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dissolved_oxygen'
@@ -14219,52 +14219,52 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'umol/L'
 	    var_list[3].units = 'degC'
 	    var_list[4].units = 'umol/L'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/MFD37/07-ZPLSCC000/telemetered/zplsc_c_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/MFD37/07-ZPLSCC000/telemetered/zplsc_c_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/MFD37/07-ZPLSCC000/telemetered/zplsc_c_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/MFD37/07-ZPLSCC000/recovered_host/zplsc_c_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/MFD37/07-ZPLSCC000/recovered_host/zplsc_c_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/MFD37/07-ZPLSCC000/recovered_host/zplsc_c_instrument'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredInst':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP01CNSM/MFD37/07-ZPLSCC000/recovered_inst/zplsc_echogram_data'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredInst':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP03ISSM/MFD37/07-ZPLSCC000/recovered_inst/zplsc_echogram_data'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredInst':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'ZPLSC' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP04OSSM/MFD37/07-ZPLSCC000/recovered_inst/zplsc_echogram_data'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/MFD35/01-ADCPTF000/telemetered/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -14290,7 +14290,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CP01CNSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP01CNSM/MFD35/01-ADCPTF000/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -14316,7 +14316,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/MFD35/01-ADCPTF000/telemetered/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -14342,7 +14342,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CP03ISSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP03ISSM/MFD35/01-ADCPTF000/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -14368,7 +14368,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/MFD35/01-ADCPSJ000/telemetered/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -14394,7 +14394,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CP04OSSM' and node == 'MFN' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP04OSSM/MFD35/01-ADCPSJ000/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -14421,17 +14421,17 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
 #Coastal Pioneer WireFollowing Profilers (WFP
-	elif mooring_name == 'CP04OSPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CP04OSPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSPM/SBS11/02-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP04OSPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSPM/SBS11/02-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSPM/WFP01/04-FLORTK000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -14454,7 +14454,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
+	elif platform_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP04OSPM/WFP01/04-FLORTK000/recovered_wfp/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -14477,7 +14477,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSPM/WFP01/02-DOFSTK000/telemetered/dofst_k_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dofst_k_oxygen_l2'
@@ -14491,7 +14491,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'Hz'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
+	elif platform_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP04OSPM/WFP01/02-DOFSTK000/recovered_wfp/dofst_k_wfp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dofst_k_oxygen_l2'
@@ -14505,7 +14505,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'Hz'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'Telemetered':
+	elif platform_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSPM/WFP01/01-VEL3DK000/telemetered/vel3d_k_wfp_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_k_eastward_velocity'
@@ -14531,7 +14531,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'ddegrees'
 	    var_list[6].units = 'ddegrees'
 	    var_list[7].units = 'dbar'
-	elif mooring_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
+	elif platform_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP04OSPM/WFP01/01-VEL3DK000/recovered_wfp/vel3d_k_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_k_eastward_velocity'
@@ -14557,7 +14557,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'ddegrees'
 	    var_list[6].units = 'ddegrees'
 	    var_list[7].units = 'dbar'
-	elif mooring_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSPM/WFP01/03-CTDPFK000/telemetered/ctdpf_ckl_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdpf_ckl_seawater_temperature'
@@ -14577,7 +14577,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
+	elif platform_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP04OSPM/WFP01/03-CTDPFK000/recovered_wfp/ctdpf_ckl_wfp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdpf_ckl_seawater_temperature'
@@ -14597,7 +14597,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSPM/WFP01/05-PARADK000/telemetered/parad_k__stc_imodem_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_k_par'
@@ -14608,7 +14608,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredWFP':
+	elif platform_name == 'CP04OSPM' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP04OSPM/WFP01/05-PARADK000/recovered_wfp/parad_k__stc_imodem_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_k_par'
@@ -14619,17 +14619,17 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CP01CNPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CP01CNPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNPM/SBS01/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP01CNPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNPM/SBS01/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNPM/WFP01/04-FLORTK000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -14652,7 +14652,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
+	elif platform_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP01CNPM/WFP01/04-FLORTK000/recovered_wfp/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -14675,7 +14675,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNPM/WFP01/02-DOFSTK000/telemetered/dofst_k_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dofst_k_oxygen_l2'
@@ -14689,7 +14689,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'Hz'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
+	elif platform_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP01CNPM/WFP01/02-DOFSTK000/recovered_wfp/dofst_k_wfp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dofst_k_oxygen_l2'
@@ -14703,7 +14703,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'Hz'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'Telemetered':
+	elif platform_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNPM/WFP01/01-VEL3DK000/telemetered/vel3d_k_wfp_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_k_eastward_velocity'
@@ -14729,7 +14729,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'ddegrees'
 	    var_list[6].units = 'ddegrees'
 	    var_list[7].units = 'dbar'
-	elif mooring_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
+	elif platform_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP01CNPM/WFP01/01-VEL3DK000/recovered_wfp/vel3d_k_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_k_eastward_velocity'
@@ -14755,7 +14755,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'ddegrees'
 	    var_list[6].units = 'ddegrees'
 	    var_list[7].units = 'dbar'
-	elif mooring_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNPM/WFP01/03-CTDPFK000/telemetered/ctdpf_ckl_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdpf_ckl_seawater_temperature'
@@ -14775,7 +14775,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
+	elif platform_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP01CNPM/WFP01/03-CTDPFK000/recovered_wfp/ctdpf_ckl_wfp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdpf_ckl_seawater_temperature'
@@ -14795,7 +14795,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNPM/WFP01/05-PARADK000/telemetered/parad_k__stc_imodem_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_k_par'
@@ -14806,7 +14806,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredWFP':
+	elif platform_name == 'CP01CNPM' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP01CNPM/WFP01/05-PARADK000/recovered_wfp/parad_k__stc_imodem_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_k_par'
@@ -14817,17 +14817,17 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CP02PMCI' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCI' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCI/SBS01/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP02PMCI' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CP02PMCI' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP02PMCI/SBS01/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCI/WFP01/04-FLORTK000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -14850,7 +14850,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMCI/WFP01/04-FLORTK000/recovered_wfp/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -14873,7 +14873,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCI/WFP01/02-DOFSTK000/telemetered/dofst_k_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dofst_k_oxygen_l2'
@@ -14887,7 +14887,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'Hz'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMCI/WFP01/02-DOFSTK000/recovered_wfp/dofst_k_wfp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dofst_k_oxygen_l2'
@@ -14901,7 +14901,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'Hz'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCI/WFP01/01-VEL3DK000/telemetered/vel3d_k_wfp_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_k_eastward_velocity'
@@ -14927,7 +14927,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'ddegrees'
 	    var_list[6].units = 'ddegrees'
 	    var_list[7].units = 'dbar'
-	elif mooring_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMCI/WFP01/01-VEL3DK000/recovered_wfp/vel3d_k_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_k_eastward_velocity'
@@ -14953,7 +14953,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'ddegrees'
 	    var_list[6].units = 'ddegrees'
 	    var_list[7].units = 'dbar'
-	elif mooring_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCI/WFP01/03-CTDPFK000/telemetered/ctdpf_ckl_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdpf_ckl_seawater_temperature'
@@ -14973,7 +14973,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMCI/WFP01/03-CTDPFK000/recovered_wfp/ctdpf_ckl_wfp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdpf_ckl_seawater_temperature'
@@ -14993,7 +14993,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCI/WFP01/05-PARADK000/telemetered/parad_k__stc_imodem_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_k_par'
@@ -15004,7 +15004,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMCI' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMCI/WFP01/05-PARADK000/recovered_wfp/parad_k__stc_imodem_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_k_par'
@@ -15015,17 +15015,17 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CP02PMCO' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCO' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCO/SBS01/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP02PMCO' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CP02PMCO' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP02PMCO/SBS01/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCO/WFP01/04-FLORTK000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -15048,7 +15048,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMCO/WFP01/04-FLORTK000/recovered_wfp/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -15071,7 +15071,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCO/WFP01/02-DOFSTK000/telemetered/dofst_k_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dofst_k_oxygen_l2'
@@ -15085,7 +15085,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'Hz'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMCO/WFP01/02-DOFSTK000/recovered_wfp/dofst_k_wfp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dofst_k_oxygen_l2'
@@ -15099,7 +15099,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'Hz'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCO/WFP01/01-VEL3DK000/telemetered/vel3d_k_wfp_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_k_eastward_velocity'
@@ -15125,7 +15125,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'ddegrees'
 	    var_list[6].units = 'ddegrees'
 	    var_list[7].units = 'dbar'
-	elif mooring_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMCO/WFP01/01-VEL3DK000/recovered_wfp/vel3d_k_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_k_eastward_velocity'
@@ -15151,7 +15151,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'ddegrees'
 	    var_list[6].units = 'ddegrees'
 	    var_list[7].units = 'dbar'
-	elif mooring_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCO/WFP01/03-CTDPFK000/telemetered/ctdpf_ckl_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdpf_ckl_seawater_temperature'
@@ -15171,7 +15171,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMCO/WFP01/03-CTDPFK000/recovered_wfp/ctdpf_ckl_wfp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdpf_ckl_seawater_temperature'
@@ -15191,7 +15191,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCO/WFP01/05-PARADK000/telemetered/parad_k__stc_imodem_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_k_par'
@@ -15202,7 +15202,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMCO' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMCO/WFP01/05-PARADK000/recovered_wfp/parad_k__stc_imodem_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_k_par'
@@ -15213,17 +15213,17 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CP02PMUI' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUI' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUI/SBS01/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP02PMUI' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CP02PMUI' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP02PMUI/SBS01/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUI/WFP01/04-FLORTK000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -15246,7 +15246,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMUI/WFP01/04-FLORTK000/recovered_wfp/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -15269,7 +15269,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUI/WFP01/02-DOFSTK000/telemetered/dofst_k_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dofst_k_oxygen_l2'
@@ -15283,7 +15283,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'Hz'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMUI/WFP01/02-DOFSTK000/recovered_wfp/dofst_k_wfp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dofst_k_oxygen_l2'
@@ -15297,7 +15297,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'Hz'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUI/WFP01/01-VEL3DK000/telemetered/vel3d_k_wfp_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_k_eastward_velocity'
@@ -15323,7 +15323,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'ddegrees'
 	    var_list[6].units = 'ddegrees'
 	    var_list[7].units = 'dbar'
-	elif mooring_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMUI/WFP01/01-VEL3DK000/recovered_wfp/vel3d_k_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_k_eastward_velocity'
@@ -15349,7 +15349,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'ddegrees'
 	    var_list[6].units = 'ddegrees'
 	    var_list[7].units = 'dbar'
-	elif mooring_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUI/WFP01/03-CTDPFK000/telemetered/ctdpf_ckl_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdpf_ckl_seawater_temperature'
@@ -15369,7 +15369,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMUI/WFP01/03-CTDPFK000/recovered_wfp/ctdpf_ckl_wfp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdpf_ckl_seawater_temperature'
@@ -15389,7 +15389,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUI/WFP01/05-PARADK000/telemetered/parad_k__stc_imodem_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_k_par'
@@ -15400,7 +15400,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMUI' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMUI/WFP01/05-PARADK000/recovered_wfp/parad_k__stc_imodem_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_k_par'
@@ -15411,17 +15411,17 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CP02PMUO' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUO' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUO/SBS01/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP02PMUO' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CP02PMUO' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP02PMUO/SBS01/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUO/WFP01/04-FLORTK000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -15444,7 +15444,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMUO/WFP01/04-FLORTK000/recovered_wfp/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -15467,7 +15467,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUO/WFP01/02-DOFSTK000/telemetered/dofst_k_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dofst_k_oxygen_l2'
@@ -15481,7 +15481,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'Hz'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMUO/WFP01/02-DOFSTK000/recovered_wfp/dofst_k_wfp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dofst_k_oxygen_l2'
@@ -15495,7 +15495,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'Hz'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUO/WFP01/01-VEL3DK000/telemetered/vel3d_k_wfp_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_k_eastward_velocity'
@@ -15521,7 +15521,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'ddegrees'
 	    var_list[6].units = 'ddegrees'
 	    var_list[7].units = 'dbar'
-	elif mooring_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMUO/WFP01/01-VEL3DK000/recovered_wfp/vel3d_k_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_k_eastward_velocity'
@@ -15547,7 +15547,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'ddegrees'
 	    var_list[6].units = 'ddegrees'
 	    var_list[7].units = 'dbar'
-	elif mooring_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUO/WFP01/03-CTDPFK000/telemetered/ctdpf_ckl_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdpf_ckl_seawater_temperature'
@@ -15567,7 +15567,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMUO/WFP01/03-CTDPFK000/recovered_wfp/ctdpf_ckl_wfp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdpf_ckl_seawater_temperature'
@@ -15587,7 +15587,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUO/WFP01/05-PARADK000/telemetered/parad_k__stc_imodem_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_k_par'
@@ -15598,7 +15598,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredWFP':
+	elif platform_name == 'CP02PMUO' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP02PMUO/WFP01/05-PARADK000/recovered_wfp/parad_k__stc_imodem_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_k_par'
@@ -15609,17 +15609,17 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CP03ISPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CP03ISPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISPM/SBS01/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP03ISPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISPM/SBS01/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISPM/WFP01/04-FLORTK000/telemetered/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -15642,7 +15642,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
+	elif platform_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP03ISPM/WFP01/04-FLORTK000/recovered_wfp/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -15665,7 +15665,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[4].units = 'm-1 sr-1'
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
-	elif mooring_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISPM/WFP01/02-DOFSTK000/telemetered/dofst_k_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dofst_k_oxygen_l2'
@@ -15679,7 +15679,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'Hz'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
+	elif platform_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'DOSTA' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP03ISPM/WFP01/02-DOFSTK000/recovered_wfp/dofst_k_wfp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'dofst_k_oxygen_l2'
@@ -15693,7 +15693,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/kg'
 	    var_list[2].units = 'Hz'
 	    var_list[3].units = 'dbar'
-	elif mooring_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'Telemetered':
+	elif platform_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISPM/WFP01/01-VEL3DK000/telemetered/vel3d_k_wfp_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_k_eastward_velocity'
@@ -15719,7 +15719,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'ddegrees'
 	    var_list[6].units = 'ddegrees'
 	    var_list[7].units = 'dbar'
-	elif mooring_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
+	elif platform_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'VEL3D' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP03ISPM/WFP01/01-VEL3DK000/recovered_wfp/vel3d_k_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'vel3d_k_eastward_velocity'
@@ -15745,7 +15745,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'ddegrees'
 	    var_list[6].units = 'ddegrees'
 	    var_list[7].units = 'dbar'
-	elif mooring_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISPM/WFP01/03-CTDPFK000/telemetered/ctdpf_ckl_wfp_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdpf_ckl_seawater_temperature'
@@ -15765,7 +15765,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
+	elif platform_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'CTD' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP03ISPM/WFP01/03-CTDPFK000/recovered_wfp/ctdpf_ckl_wfp_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'ctdpf_ckl_seawater_temperature'
@@ -15785,7 +15785,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'kg/m3'
 	    var_list[4].units = 'dbar'
 	    var_list[5].units = 'S/m'
-	elif mooring_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISPM/WFP01/05-PARADK000/telemetered/parad_k__stc_imodem_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_k_par'
@@ -15796,7 +15796,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredWFP':
+	elif platform_name == 'CP03ISPM' and node == 'PROFILER' and instrument_class == 'PARAD' and method == 'RecoveredWFP':
 	    uframe_dataset_name = 'CP03ISPM/WFP01/05-PARADK000/recovered_wfp/parad_k__stc_imodem_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_k_par'
@@ -15807,7 +15807,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif mooring_name == 'CP04OSPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CP04OSPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP04OSPM/RII01/02-ADCPSL010/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -15833,7 +15833,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP04OSPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSPM/RII01/02-ADCPSL010/recovered_host/adcps_jln_stc_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -15859,7 +15859,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP04OSPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CP04OSPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSPM/RII01/02-ADCPSL010/telemetered/adcps_jln_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -15885,7 +15885,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP01CNPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CP01CNPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP01CNPM/RII01/02-ADCPTG010/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -15911,7 +15911,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP01CNPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNPM/RII01/02-ADCPTG010/recovered_host/adcps_jln_stc_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -15937,7 +15937,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP01CNPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CP01CNPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNPM/RII01/02-ADCPTG010/telemetered/adcps_jln_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -15963,7 +15963,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP02PMCI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CP02PMCI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP02PMCI/RII01/02-ADCPTG010/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -15989,7 +15989,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP02PMCI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CP02PMCI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP02PMCI/RII01/02-ADCPTG010/recovered_host/adcps_jln_stc_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16015,7 +16015,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP02PMCI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCI/RII01/02-ADCPTG010/telemetered/adcps_jln_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16041,7 +16041,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP02PMCO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CP02PMCO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP02PMCO/RII01/02-ADCPTG010/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16067,7 +16067,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP02PMCO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CP02PMCO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP02PMCO/RII01/02-ADCPTG010/recovered_host/adcps_jln_stc_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16093,7 +16093,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP02PMCO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCO/RII01/02-ADCPTG010/telemetered/adcps_jln_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16119,7 +16119,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP02PMUI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CP02PMUI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP02PMUI/RII01/02-ADCPTG010/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16145,7 +16145,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP02PMUI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CP02PMUI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP02PMUI/RII01/02-ADCPTG010/recovered_host/adcps_jln_stc_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16171,7 +16171,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP02PMUI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUI/RII01/02-ADCPTG010/telemetered/adcps_jln_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16197,7 +16197,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP02PMUO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CP02PMUO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP02PMUO/RII01/02-ADCPSL010/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16223,7 +16223,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP02PMUO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CP02PMUO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP02PMUO/RII01/02-ADCPSL010/recovered_host/adcps_jln_stc_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16249,7 +16249,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP02PMUO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUO/RII01/02-ADCPSL010/telemetered/adcps_jln_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16275,7 +16275,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP03ISPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CP03ISPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP03ISPM/RII01/02-ADCPTG010/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16301,7 +16301,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP03ISPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISPM/RII01/02-ADCPTG010/recovered_host/adcps_jln_stc_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16327,7 +16327,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CP03ISPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CP03ISPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISPM/RII01/02-ADCPTG010/telemetered/adcps_jln_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16353,7 +16353,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif mooring_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL336/03-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -16379,7 +16379,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL336/03-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -16405,7 +16405,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL336/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -16425,7 +16425,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL336/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -16445,7 +16445,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL336/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -16474,7 +16474,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL336/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -16503,7 +16503,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL336/05-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -16520,7 +16520,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL336/05-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -16537,7 +16537,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL336' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL336/01-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16572,7 +16572,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL388/03-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -16598,7 +16598,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL388/03-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -16624,7 +16624,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL388/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -16644,7 +16644,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL388/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -16664,7 +16664,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL388/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -16693,7 +16693,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL388/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -16722,7 +16722,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL388/05-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -16739,7 +16739,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL388/05-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -16756,7 +16756,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL388' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL388/01-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16791,7 +16791,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL335/03-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -16817,7 +16817,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL335/03-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -16843,7 +16843,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL335/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -16863,7 +16863,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL335/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -16883,7 +16883,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL335/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -16912,7 +16912,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL335/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -16941,7 +16941,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL335/05-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -16958,7 +16958,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL335/05-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -16975,7 +16975,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL335' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL335/01-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -17010,7 +17010,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL339/03-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -17036,7 +17036,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL339/03-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -17062,7 +17062,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL339/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -17082,7 +17082,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL339/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -17102,7 +17102,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL339/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -17131,7 +17131,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL339/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -17160,7 +17160,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL339/05-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -17177,7 +17177,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL339/05-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -17194,7 +17194,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL339' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL339/01-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -17229,7 +17229,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL340/03-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -17255,7 +17255,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL340/03-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -17281,7 +17281,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL340/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -17301,7 +17301,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL340/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -17321,7 +17321,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL340/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -17350,7 +17350,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL340/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -17379,7 +17379,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL340/05-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -17396,7 +17396,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL340/05-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -17413,7 +17413,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL340' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL340/01-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -17448,7 +17448,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL374/03-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -17474,7 +17474,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL374/03-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -17500,7 +17500,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL374/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -17520,7 +17520,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL374/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -17540,7 +17540,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL374/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -17569,7 +17569,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL374/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -17598,7 +17598,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL374/05-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -17615,7 +17615,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL374/05-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -17632,7 +17632,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL374' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL374/01-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -17667,7 +17667,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL375/03-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -17693,7 +17693,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL375/03-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -17719,7 +17719,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL375/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -17739,7 +17739,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL375/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -17759,7 +17759,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL375/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -17788,7 +17788,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL375/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -17817,7 +17817,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL375/05-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -17834,7 +17834,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL375/05-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -17851,7 +17851,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL375' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL375/01-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -17886,7 +17886,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL376/03-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -17912,7 +17912,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL376/03-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -17938,7 +17938,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL376/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -17958,7 +17958,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL376/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -17978,7 +17978,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL376/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -18007,7 +18007,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL376/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -18036,7 +18036,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL376/05-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -18053,7 +18053,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL376/05-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -18070,7 +18070,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL376' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL376/01-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -18105,7 +18105,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL379/03-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -18131,7 +18131,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL379/03-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -18157,7 +18157,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL379/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -18177,7 +18177,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL379/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -18197,7 +18197,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL379/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -18226,7 +18226,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL379/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -18255,7 +18255,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL379/05-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -18272,7 +18272,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL379/05-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -18289,7 +18289,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL379' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL379/01-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -18324,7 +18324,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL380/03-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -18350,7 +18350,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL380/03-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -18376,7 +18376,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL380/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -18396,7 +18396,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL380/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -18416,7 +18416,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL380/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -18445,7 +18445,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL380/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -18474,7 +18474,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL380/05-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -18491,7 +18491,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL380/05-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -18508,7 +18508,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL380' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL380/01-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -18543,7 +18543,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL387/03-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -18569,7 +18569,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL387/03-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -18595,7 +18595,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL387/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -18615,7 +18615,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL387/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -18635,7 +18635,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL387/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -18664,7 +18664,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL387/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -18693,7 +18693,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL387/05-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -18710,7 +18710,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL387/05-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -18727,7 +18727,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL387' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL387/01-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -18762,7 +18762,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL389/03-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -18788,7 +18788,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL389/03-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -18814,7 +18814,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL389/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -18834,7 +18834,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL389/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -18854,7 +18854,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL389/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -18883,7 +18883,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL389/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -18912,7 +18912,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL389/05-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -18929,7 +18929,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL389/05-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -18946,7 +18946,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL389' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL389/01-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -18981,7 +18981,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
+	elif platform_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL514/03-CTDGVM000/telemetered/ctdgv_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -19007,7 +19007,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'CTD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL514/03-CTDGVM000/recovered_host/ctdgv_m_glider_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_water_temp'
@@ -19033,7 +19033,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[5].units = 'S/m'
 	    var_list[6].units = 'degree_north'
 	    var_list[7].units = 'degree_east'
-	elif mooring_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
+	elif platform_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL514/04-DOSTAM000/telemetered/dosta_abcdjm_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -19053,7 +19053,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'DOSTA' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL514/04-DOSTAM000/recovered_host/dosta_abcdjm_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'sci_oxy4_oxygen'
@@ -19073,7 +19073,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[3].units = 'dbar'
 	    var_list[4].units = 'degree_north'
 	    var_list[5].units = 'degree_east'
-	elif mooring_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
+	elif platform_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL514/02-FLORTM000/telemetered/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -19102,7 +19102,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'FLORT' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL514/02-FLORTM000/recovered_host/flort_m_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
@@ -19131,7 +19131,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[6].units = 'dbar'
 	    var_list[7].units = 'degree_north'
 	    var_list[8].units = 'degree_east'
-	elif mooring_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
+	elif platform_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP05MOAS/GL514/05-PARADM000/telemetered/parad_m_glider_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -19148,7 +19148,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'PARAD' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL514/05-PARADM000/recovered_host/parad_m_glider_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'parad_m_par'
@@ -19165,7 +19165,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[2].units = 'dbar'
 	    var_list[3].units = 'degree_north'
 	    var_list[4].units = 'degree_east'
-	elif mooring_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CPGL514' and node == 'GLIDER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP05MOAS/GL514/01-ADCPAM000/recovered_host/adcp_velocity_glider'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -19200,107 +19200,107 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[8].units = 'dbar'
 	    var_list[9].units = 'degree_north'
 	    var_list[10].units = 'degree_east'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/SBD11/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/SBD11/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP03ISSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/SBD11/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP03ISSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/SBD11/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP04OSSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/SBD11/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP04OSSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/SBD11/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP01CNPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CP01CNPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNPM/SBS01/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP01CNPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNPM/SBS01/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP02PMCI' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCI' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCI/SBS01/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP02PMCI' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CP02PMCI' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP02PMCI/SBS01/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP02PMCO' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCO' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCO/SBS01/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP02PMCO' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CP02PMCO' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP02PMCO/SBS01/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP02PMUI' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUI' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUI/SBS01/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP02PMUI' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CP02PMUI' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP02PMUI/SBS01/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP02PMUO' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUO' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUO/SBS01/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP02PMUO' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CP02PMUO' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP02PMUO/SBS01/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP03ISPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CP03ISPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISPM/SBS01/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP03ISPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISPM/SBS01/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP04OSPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
+	elif platform_name == 'CP04OSPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSPM/SBS01/01-MOPAK0000/telemetered/mopak_o_dcl_accel'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP04OSPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSPM' and node == 'BUOY' and instrument_class == 'MOPAK' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSPM/SBS01/01-MOPAK0000/recovered_host/mopak_o_dcl_accel_recovered'
 	    var_list[0].name = 'time'
 	    var_list[0].data = np.array([])
 	    var_list[0].units = 'seconds since 1900-01-01'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSSM/RID26/07-NUTNRB000/telemetered/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -19311,7 +19311,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSSM/RID26/07-NUTNRB000/recovered_host/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -19322,7 +19322,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
+	elif platform_name == 'CP04OSSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP04OSSM/RID26/07-NUTNRB000/recovered_inst/suna_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -19333,7 +19333,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNSM/RID26/07-NUTNRB000/telemetered/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -19344,7 +19344,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNSM/RID26/07-NUTNRB000/recovered_host/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -19355,7 +19355,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
+	elif platform_name == 'CP01CNSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP01CNSM/RID26/07-NUTNRB000/recovered_inst/suna_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -19366,7 +19366,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISSM/RID26/07-NUTNRB000/telemetered/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -19377,7 +19377,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISSM/RID26/07-NUTNRB000/recovered_host/suna_dcl_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -19388,7 +19388,7 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
-	elif mooring_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
+	elif platform_name == 'CP03ISSM' and node == 'NSIF' and instrument_class == 'NUTNR' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP03ISSM/RID26/07-NUTNRB000/recovered_inst/suna_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'nitrate_concentration'
@@ -19400,5 +19400,5 @@ def M2M_URLs(mooring_name,node,instrument_class,method):
 	    var_list[1].units = 'umol/L'
 	    var_list[2].units = 'umol/L'
 	else:
-	    print('Illegal mooring_name, node, instrument_class, method or combination thereof.')
+	    print('Illegal platform_name, node, instrument_class, method or combination thereof.')
 	return(uframe_dataset_name,var_list)
