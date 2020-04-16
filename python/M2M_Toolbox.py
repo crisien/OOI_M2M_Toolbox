@@ -6073,7 +6073,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
 	elif platform_name == 'CE01ISSP' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredCSPP':
-	    uframe_dataset_name = 'CE01ISSP/SP001/08-FLORTJ000/recovered_cspp/flort_dj_cspp_instrument_recovered'
+	    uframe_dataset_name = 'CE01ISSP/SP001/08-FLORTJ000/recovered_cspp/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
 	    var_list[2].name = 'fluorometric_chlorophyll_a'
@@ -6119,7 +6119,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
 	elif platform_name == 'CE06ISSP' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredCSPP':
-	    uframe_dataset_name = 'CE06ISSP/SP001/08-FLORTJ000/recovered_cspp/flort_dj_cspp_instrument_recovered'
+	    uframe_dataset_name = 'CE06ISSP/SP001/08-FLORTJ000/recovered_cspp/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
 	    var_list[2].name = 'fluorometric_chlorophyll_a'
@@ -6550,7 +6550,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'dbar'
 	elif platform_name == 'CE02SHSP' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredCSPP':
-	    uframe_dataset_name = 'CE02SHSP/SP001/07-FLORTJ000/recovered_cspp/flort_dj_cspp_instrument_recovered'
+	    uframe_dataset_name = 'CE02SHSP/SP001/07-FLORTJ000/recovered_cspp/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
 	    var_list[2].name = 'fluorometric_chlorophyll_a'
@@ -6573,7 +6573,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm-1'
 	    var_list[6].units = 'dbar'
 	elif platform_name == 'CE07SHSP' and node == 'PROFILER' and instrument_class == 'FLORT' and method == 'RecoveredCSPP':
-	    uframe_dataset_name = 'CE07SHSP/SP001/07-FLORTJ000/recovered_cspp/flort_dj_cspp_instrument_recovered'
+	    uframe_dataset_name = 'CE07SHSP/SP001/07-FLORTJ000/recovered_cspp/flort_sample'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'seawater_scattering_coefficient'
 	    var_list[2].name = 'fluorometric_chlorophyll_a'
