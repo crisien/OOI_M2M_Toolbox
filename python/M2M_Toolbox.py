@@ -5953,7 +5953,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[1].units = 'degC'
 	    var_list[2].units = 'uatm'
 	elif platform_name == 'CE02SHBP' and node == 'BEP' and instrument_class == 'ADCP' and method == 'Streamed':
-	    uframe_dataset_name = 'CE02SHBP/LJ01D/05-ADCPTB104/streamed/adcp_velocity_earth'
+	    uframe_dataset_name = 'CE02SHBP/LJ01D/05-ADCPTB104/streamed/adcp_velocity_beam'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
 	    var_list[2].name = 'heading'
@@ -5979,7 +5979,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
 	elif platform_name == 'CE04OSBP' and node == 'BEP' and instrument_class == 'ADCP' and method == 'Streamed':
-	    uframe_dataset_name = 'CE04OSBP/LJ01C/05-ADCPSI103/streamed/adcp_velocity_earth'
+	    uframe_dataset_name = 'CE04OSBP/LJ01C/05-ADCPSI103/streamed/adcp_velocity_beam'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
 	    var_list[2].name = 'heading'
