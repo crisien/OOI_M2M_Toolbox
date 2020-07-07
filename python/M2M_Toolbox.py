@@ -15807,7 +15807,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[0].units = 'seconds since 1900-01-01'
 	    var_list[1].units = 'umol photons m-2 s-1'
 	    var_list[2].units = 'dbar'
-	elif platform_name == 'CP04OSPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CP04OSPM' and node == 'RISER' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP04OSPM/RII01/02-ADCPSL010/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -15833,7 +15833,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP04OSPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CP04OSPM' and node == 'RISER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP04OSPM/RII01/02-ADCPSL010/recovered_host/adcps_jln_stc_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -15859,7 +15859,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP04OSPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CP04OSPM' and node == 'RISER' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP04OSPM/RII01/02-ADCPSL010/telemetered/adcps_jln_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -15885,7 +15885,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP01CNPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CP01CNPM' and node == 'RISER' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP01CNPM/RII01/02-ADCPTG010/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -15911,7 +15911,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP01CNPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CP01CNPM' and node == 'RISER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP01CNPM/RII01/02-ADCPTG010/recovered_host/adcps_jln_stc_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -15937,7 +15937,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP01CNPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CP01CNPM' and node == 'RISER' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP01CNPM/RII01/02-ADCPTG010/telemetered/adcps_jln_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -15963,7 +15963,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP02PMCI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CP02PMCI' and node == 'RISER' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP02PMCI/RII01/02-ADCPTG010/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -15989,7 +15989,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP02PMCI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CP02PMCI' and node == 'RISER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP02PMCI/RII01/02-ADCPTG010/recovered_host/adcps_jln_stc_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16015,7 +16015,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP02PMCI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCI' and node == 'RISER' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCI/RII01/02-ADCPTG010/telemetered/adcps_jln_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16041,7 +16041,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP02PMCO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CP02PMCO' and node == 'RISER' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP02PMCO/RII01/02-ADCPTG010/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16067,7 +16067,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP02PMCO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CP02PMCO' and node == 'RISER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP02PMCO/RII01/02-ADCPTG010/recovered_host/adcps_jln_stc_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16093,7 +16093,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP02PMCO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CP02PMCO' and node == 'RISER' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMCO/RII01/02-ADCPTG010/telemetered/adcps_jln_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16119,7 +16119,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP02PMUI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CP02PMUI' and node == 'RISER' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP02PMUI/RII01/02-ADCPTG010/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16145,7 +16145,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP02PMUI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CP02PMUI' and node == 'RISER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP02PMUI/RII01/02-ADCPTG010/recovered_host/adcps_jln_stc_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16171,7 +16171,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP02PMUI' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUI' and node == 'RISER' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUI/RII01/02-ADCPTG010/telemetered/adcps_jln_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16197,7 +16197,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP02PMUO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CP02PMUO' and node == 'RISER' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP02PMUO/RII01/02-ADCPSL010/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16223,7 +16223,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP02PMUO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CP02PMUO' and node == 'RISER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP02PMUO/RII01/02-ADCPSL010/recovered_host/adcps_jln_stc_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16249,7 +16249,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP02PMUO' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CP02PMUO' and node == 'RISER' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP02PMUO/RII01/02-ADCPSL010/telemetered/adcps_jln_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16275,7 +16275,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP03ISPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredInst':
+	elif platform_name == 'CP03ISPM' and node == 'RISER' and instrument_class == 'ADCP' and method == 'RecoveredInst':
 	    uframe_dataset_name = 'CP03ISPM/RII01/02-ADCPTG010/recovered_inst/adcp_velocity_earth'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16301,7 +16301,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP03ISPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'RecoveredHost':
+	elif platform_name == 'CP03ISPM' and node == 'RISER' and instrument_class == 'ADCP' and method == 'RecoveredHost':
 	    uframe_dataset_name = 'CP03ISPM/RII01/02-ADCPTG010/recovered_host/adcps_jln_stc_instrument_recovered'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
@@ -16327,7 +16327,7 @@ def M2M_URLs(platform_name,node,instrument_class,method):
 	    var_list[5].units = 'm/s'
 	    var_list[6].units = 'm/s'
 	    var_list[7].units = 'm/s'
-	elif platform_name == 'CP03ISPM' and node == 'NSIF' and instrument_class == 'ADCP' and method == 'Telemetered':
+	elif platform_name == 'CP03ISPM' and node == 'RISER' and instrument_class == 'ADCP' and method == 'Telemetered':
 	    uframe_dataset_name = 'CP03ISPM/RII01/02-ADCPTG010/telemetered/adcps_jln_stc_instrument'
 	    var_list[0].name = 'time'
 	    var_list[1].name = 'bin_depths'
